@@ -5,3 +5,16 @@ body {
   background: black;
   color: white;
 }
+
+ .parallax .parallax-content-holder {
+    position: relative;
+    -webkit-perspective: 1000px;
+            perspective: 1000px;
+    z-index: -1;
+  }
+  .parallax .parallax-content-holder .parallax-content {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+  }

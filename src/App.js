@@ -1,6 +1,7 @@
 import React from "react";
 import { Parallax } from "react-parallax";
 import Nav from './Nav';
+import ParallaxTest from './ParallaxTest'
 
 const styles = {
   textAlign: "center"
@@ -39,6 +40,7 @@ const App = () => (
   <div style={styles}>
    <Nav /> 
     <div style={{ height: "5vh" }} />
+    <ParallaxTest />
     <Parallax bgImage={image3} strength={500}>
       <div style={{ height: 500, display: "block" }}>
         <div style={insideStyles}>
@@ -125,11 +127,7 @@ Currently booking weddings for 2018 and beyond. Please email
     <div style={{ display: "flex" }}>
       <h1 style={{ padding: "1em", textAlign: "justify" }}>Electronics</h1>
       <p style={{ padding: "1em", textAlign: "justify" }}>
-        Wedding photography highlight from my former company{" "}
-        <a href="https://sfcityhallphoto.com">SF City Hall Photo</a>, and other
-        weddings and events throughout Northern California. Currently booking
-        weddings for 2018 and beyond. Please email me directly for serious
-        inquiries <a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>
+        Ever since I got my first eMachines computer in 3rd Grade, I've had a deep facination for electronics, circuits, and science.  In college I started tinkering with LED's and robotics, which led me to creating intrique and efficient LED lighting from recycled materials. These projects we're excruciatingly long and tedious, but never stopped to astound me when they were finally finished and working.  From combining CREE leds with aluminum bodies strung together with copper wire and brass symbols, to creating cylindrical copper lamps radiating light through hundreds of tiny holes, each piece was truly unique and one-of-a-kind.
       </p>
     </div>
     <Parallax bgImage={image3} strength={500}>
@@ -141,11 +139,9 @@ Currently booking weddings for 2018 and beyond. Please email
     </Parallax>
     <div style={{ display: "flex" }}>
       <p style={{ padding: "1em", textAlign: "justify" }}>
-        voice controlled chess game inspired by the harry potter books. works on
-        chrome 50+. Play single player against a challenging AI or play locally
-        on your device with an opponent or against yourself. Build with React,
-        Express, and the in browser google speech API
-      </p>
+        My truest passion, music, will always hold the closet to my heart.  As an outlet for all life has to offer, from the good to the bad, getting into the music is fully stepping into the 'zone'. Having an understanding of getting into that subconcious space, and literally putting out good vibrations into the universe is a feeling that one must experience to fully understand.  
+        I invite you to listen to a samples of my recordings, from experiments in using a BOSS RC-30 Loop Pedal, welcome lostLoops 
+        Today collabolating, and performing offer me the most reward and satisfaction, hit me up if you want to <a href="mailto:mail4mdb@gmail.com">jam!</a></p>
       <h1 style={{ padding: "1em", textAlign: "justify" }}>Music</h1>
     </div>
     <Parallax bgImage={image2} strength={500}>
@@ -158,8 +154,7 @@ Currently booking weddings for 2018 and beyond. Please email
     <div style={{ display: "flex" }}>
       <h1 style={{ padding: "1em", textAlign: "justify" }}>Testimonials</h1>
       <p>
-        voice controlled chess game inspired by the harry potter books. works on
-        chrome 50+
+        A collection of over 30 5 star reviews earned founding the business <a href="https://sfcityhallphoto.com">SF City Hall Photo</a>. These shoots were all weddings at the beautiful City Hall building of San Francisco, a popular distination of couples getting married in the city.  The buildings highlights wonderfully detailed architecture, with gorgeous lighting and a stunning backgrounds.
       </p>
     </div>
     <Parallax bgImage={image1} strength={500}>
@@ -169,7 +164,12 @@ Currently booking weddings for 2018 and beyond. Please email
         </div>
       </div>
     </Parallax>
-
+    <div style={{ display: "flex" }}>
+      <p>
+        Born in San Francisco in the late 80's, I've had a chance to see technology in a unique light a the .com boom completely transformed my hometown into the technology hub of the world. During college I studied economics during the worst downturn of modern history since the great depression, which afforded me insights into the struggles of the global economy and the possible vectors for survival. Returning to the tech roots that have always been around me I got back into coding fulltime in mid 2016, selling off my photography business and attending Hack Reactor.  My current interests in tech revolve around creating more fair and just democractic systems, social justice and equality, cyber security and protecting our online identities, increasing energy efficiencies and reducing waste, more efficient modes of transporation, providing health food for our growing population, and space colonization. 
+      </p>
+      <h1 style={{ padding: "1em", textAlign: "justify" }}>About</h1>
+    </div>
     <h2>{"\u2728"}</h2>
   </div>
 );
