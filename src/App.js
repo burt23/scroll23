@@ -348,9 +348,8 @@ class App extends React.Component {
               videos, and photobooths have given me great satisfaction in the
               happiness I've brought to people. Previously founder of
               <a href="https://sfcityhallphoto.com">SF City Hall Photo</a>
-              Currently booking weddings for 2018 and beyond. Please email me
-              directly for serious inquiries{" "}
-              <a href="mailto:mail4mdb@gmail.com">Send email to nowhere</a>
+              Currently booking weddings for 2018 and beyond.  Please <a href="mailto:mail4mdb@gmail.com">email me</a> 
+              directly for serious inquiries
             </div>
           </div>
         </Element>
@@ -360,8 +359,7 @@ class App extends React.Component {
               <h1 style={{ float: "left", padding: "0em 2em" }}>
                 Testimonials
               </h1>
-              A collection of over 30 5 star reviews earned founding the
-              business 
+              A collection of photography reviews while launching
               <a href="https://sfcityhallphoto.com">SF City Hall Photo</a>.
               These shoots were all weddings at the beautiful City Hall building
               of San Francisco, a popular destination for couples getting married
