@@ -1,15 +1,20 @@
 import React from "react";
 import { Parallax } from "react-parallax";
-import Nav from "./Nav";
 import Navbar from "./Navbar";
 import TypistHero from "./TypistHero";
 import Particles from "react-particles-js";
-import Typist from "react-typist";
 import Scroll from "react-scroll";
 import params from "./particleParams.js";
 import Logo from "./logo";
+import DownArrows from "./DownArrows";
+import Gallery from "./Gallery";
+import MasonryGallery from "./MasonryGallery";
+import PrivateListSVG from "./PrivateListSVG";
+import UvaSVG from "./UvaSVG";
+import TruckHuntSVG from "./TruckHuntSVG";
+import WizardsChessSVG from "./WizardsChessSVG";
+import YouInSVG from "./YouInSVG";
 
-let Link = Scroll.Link;
 let Events = Scroll.Events;
 let Element = Scroll.Element;
 let scroll = Scroll.animateScroll;
@@ -18,18 +23,7 @@ let scrollSpy = Scroll.scrollSpy;
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      messages: [
-        "coder",
-        "designer",
-        "photographer",
-        "musician",
-        "human",
-        "programmer"
-      ],
-      currentMessage: "coder",
-      counter: 1
-    };
+    this.state = {};
     this.init = this.init.bind(this);
     this.updateMessage = this.updateMessage.bind(this);
     this.scrollToTop = this.scrollToTop.bind(this);
@@ -78,97 +72,271 @@ class App extends React.Component {
       color: "white"
     };
 
-    const image1 =
-      "https://images.unsplash.com/photo-1498092651296-641e88c3b057?auto=format&fit=crop&w=1778&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D";
-    const image2 =
-      "https://v478pa.bn1.livefilestore.com/y2m2yJeC7UfWJ9AiIG8Lm4_K5BiN1yRU84tMlBtxQ-7Llr9oV4XYEYyr8l0j8eXPbFroKrD1f9KKjY_jURbKC5lA_rS6h6mOBZVgCeZknD6I9VAl126yEzdzPTXk0KX_Tdd/air.jpg?psid=1";
-    const image3 =
-      "https://brightcove04pmdo-a.akamaihd.net/5104226627001/5104226627001_5297440765001_5280261645001-vs.jpg?pubId=5104226627001&videoId=5280261645001";
-    const image4 =
-      "https://images.unsplash.com/photo-1498092651296-641e88c3b057?auto=format&fit=crop&w=1778&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D";
-    const image5 =
-      "https://v478pa.bn1.livefilestore.com/y2m2yJeC7UfWJ9AiIG8Lm4_K5BiN1yRU84tMlBtxQ-7Llr9oV4XYEYyr8l0j8eXPbFroKrD1f9KKjY_jURbKC5lA_rS6h6mOBZVgCeZknD6I9VAl126yEzdzPTXk0KX_Tdd/air.jpg?psid=1";
-    const image6 =
-      "https://brightcove04pmdo-a.akamaihd.net/5104226627001/5104226627001_5297440765001_5280261645001-vs.jpg?pubId=5104226627001&videoId=5280261645001";
-    const image7 =
-      "https://images.unsplash.com/photo-1498092651296-641e88c3b057?auto=format&fit=crop&w=1778&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D";
-    const image8 =
-      "https://v478pa.bn1.livefilestore.com/y2m2yJeC7UfWJ9AiIG8Lm4_K5BiN1yRU84tMlBtxQ-7Llr9oV4XYEYyr8l0j8eXPbFroKrD1f9KKjY_jURbKC5lA_rS6h6mOBZVgCeZknD6I9VAl126yEzdzPTXk0KX_Tdd/air.jpg?psid=1";
-    const image9 =
-      "https://brightcove04pmdo-a.akamaihd.net/5104226627001/5104226627001_5297440765001_5280261645001-vs.jpg?pubId=5104226627001&videoId=5280261645001";
-
-    const text = {
-      weddings:
-        'I feel fortunate to have had the opportunity to have shared so many\
-            celebrations of love, having attended dozens of weddings throughout\
-            Northern California. These opportities to document the moments\
-            people hold so dearly in different mediums such as photos, videos,\
-            and photobooths have given me great satisfaction in the happiness\
-            I\'ve brought to people. Previously founder of\
-            <a href="https://sfcityhallphoto.com">SF City Hall Photo</a>\
-            Currently booking weddings for 2018 and beyond. Please email me\
-            directly for serious inquiries{" "}\
-            <a href="mailto:mail4mdb@gmail.com">Send email to nowhere</a>'
-    };
+    const albumArt = "https://f4.bcbits.com/img/0005527348_100.png";
+    const me =
+      "https://scontent.fsnc1-1.fna.fbcdn.net/v/t1.0-9/14463157_134819846977042_9157923054910920849_n.jpg?oh=b4794833576f5d089b4b236c21b13622&oe=5A9FE0C0";
 
     const App = () => (
       <div style={styles}>
-        <Nav />
         <Navbar />
+
         <div>
           <Particles
             params={params}
             style={{
-              position: "absolute",
+              position: "fixed",
               top: 0,
               left: 0,
               height: "100vh",
-              width: "100vw"
+              width: "100vw",
+              zIndex: -9999
             }}
           />
 
           <div style={{ height: "100vh", display: "block" }}>
             <div style={insideStyles}>
-              <div>
+              <div id="welcomeLogo">
                 <Logo />
               </div>
               <TypistHero />
             </div>
             <div>
-              <svg class="arrows">
-                <path class="a1" d="M0 0 L30 32 L60 0" />
-                <path class="a2" d="M0 20 L30 52 L60 20" />
-                <path class="a3" d="M0 40 L30 72 L60 40" />
-              </svg>
+              <DownArrows />
             </div>
           </div>
         </div>
-        <Element name="weddings">
-          <Parallax bgImage={image3} strength={500}>
-            <div style={{ height: 500, display: "block" }} />
-          </Parallax>
-          <div style={{ display: "flex" }} key={1}>
-            <h1 style={{ padding: "1em" }}>Weddings</h1>
-            <p style={{ padding: "1em", textAlign: "justify" }}>
-              I feel fortunate to have had the opportunity to have shared so
-              many celebrations of love, having attended dozens of weddings
-              throughout Northern California. These opportities to document the
-              moments people hold so dearly in different mediums such as photos,
-              videos, and photobooths have given me great satisfaction in the
-              happiness I've brought to people. Previously founder of
-              <a href="https://sfcityhallphoto.com">SF City Hall Photo</a>
-              Currently booking weddings for 2018 and beyond. Please email me
-              directly for serious inquiries{" "}
-              <a href="mailto:mail4mdb@gmail.com">Send email to nowhere</a>
-            </p>
+
+        <Element name="truckHunt">
+          <div style={{ background: "#d28343e3" }}>
+            <TruckHuntSVG />
+            <iframe
+              style={{ width: "100vw", minHeight: "40vh" }}
+              src="https://www.youtube.com/embed/iVUxqjB9uu4"
+              frameBorder="0"
+              gesture="media"
+              allowFullScreen
+            />
+
+            <div style={{ display: "flex", flexDirection: "row" }}>
+              <div style={{ flex: "auto" }}>
+                <ul
+                  style={{
+                    listStyle: "none",
+                    display: "flex",
+                    flexDirection: "column"
+                  }}
+                >
+                  <h1 style={{ flex: "auto" }}>React/Redux</h1>
+                  <li style={{ flex: "auto" }}>
+                    <a href="https://github.com/TutelaryToads/TutelaryToads/blob/master/client/src/containers/Login.jsx#L138-L152">
+                      Dispatching Actions from Authentication Portal
+                    </a>
+                  </li>
+                  <li style={{ flex: "auto" }}>
+                    <a href="https://github.com/TutelaryToads/TutelaryToads/blob/master/client/src/actions/signupActions.js#L60-L83">
+                      Using Isomorphic-Fetch and Redux
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div style={{ flex: "auto" }}>
+                <ul
+                  style={{
+                    listStyle: "none",
+                    display: "flex",
+                    flexDirection: "column"
+                  }}
+                >
+                  <h1 style={{ flex: "auto" }}>Node/Express</h1>
+                  <li style={{ flex: "auto" }}>
+                    <a href="https://github.com/TutelaryToads/TutelaryToads/blob/master/server/server.js#L3-L6">
+                      Using dotenv in production Node
+                    </a>
+                  </li>
+                  <li style={{ flex: "auto" }}>
+                    <a href="https://github.com/TutelaryToads/TutelaryToads/blob/master/server/requestHandler.js">
+                      Writing clean route handlers
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div style={{ flex: "auto" }}>
+                <ul
+                  style={{
+                    listStyle: "none",
+                    display: "flex",
+                    flexDirection: "column"
+                  }}
+                >
+                  <h1 style={{ flex: "auto" }}>Stripe API</h1>
+                  <li style={{ flex: "auto" }}>
+                    <a href="https://github.com/TutelaryToads/TutelaryToads/blob/master/server/routes/stripeAuthorization.js#L8-L21">
+                      How to write Stripe OAUTH request parameters
+                    </a>
+                  </li>
+                  <li style={{ flex: "auto" }}>
+                    <a href="https://github.com/TutelaryToads/TutelaryToads/blob/master/server/routes/stripeCallback.js#L2-L4">
+                      Passing OAUTH endpoint optional queries via state
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </Element>
+        <Element name="wizardsChess">
+          <div style={{ background: "rgba(48, 52, 102, 0.8)" }}>
+            <WizardsChessSVG />
+            <h1 style={{ margin: "0 auto", width: "100vw" }}>
+              Voice Controlled Online Chess
+            </h1>
+
+            <div style={{ display: "flex", flexDirection: "row" }}>
+              <div style={{ flex: "auto" }}>
+                <ul
+                  style={{
+                    listStyle: "none",
+                    display: "flex",
+                    flexDirection: "column"
+                  }}
+                >
+                  <h1 style={{ flex: "auto" }}>Material UI</h1>
+                  <li style={{ flex: "auto" }}>
+                    <a href="https://github.com/twalk4821/wizardsChessAPI/blob/master/src/index.js#L15-L19">
+                      Enabling Dark Theme
+                    </a>
+                  </li>
+                  <li style={{ flex: "auto" }}>
+                    <a href="https://github.com/twalk4821/wizardsChessAPI/blob/master/src/components/paperCard.js#L25-L30">
+                      Styling dynamic text inputs
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div style={{ flex: "auto" }}>
+                <ul
+                  style={{
+                    listStyle: "none",
+                    display: "flex",
+                    flexDirection: "column"
+                  }}
+                >
+                  <h1 style={{ flex: "auto" }}>Wireframes</h1>
+                  <li style={{ flex: "auto" }}>
+                    <a href="https://github.com/twalk4821/wizardsChessAPI/blob/master/wireframes/main.png">
+                      Creating a Storyboard
+                    </a>
+                  </li>
+                  <li style={{ flex: "auto" }}>
+                    <a href="https://www.adobe.com/products/xd.html">
+                      Leveraging Adobe XD
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div style={{ flex: "auto" }}>
+                <ul
+                  style={{
+                    listStyle: "none",
+                    display: "flex",
+                    flexDirection: "column"
+                  }}
+                >
+                  <h1 style={{ flex: "auto" }}>Config</h1>
+                  <li style={{ flex: "auto" }}>
+                    <a href="https://github.com/twalk4821/wizardsChessAPI/blob/master/webpack.config.js#L3-L10">
+                      Setting up Webpack 3
+                    </a>
+                  </li>
+                  <li style={{ flex: "auto" }}>
+                    <a href="https://github.com/twalk4821/wizardsChessAPI/blob/master/src/App.js#L29">
+                      Redux with React Router v4
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </Element>
+        <Element name="privateList">
+          <div style={{ background: "rgba(14, 127, 204, 0.8)" }}>
+            <PrivateListSVG style={{ background: "lightseagreen" }} />
+            <div style={{ display: "flex", flexDirection: "row" }}>
+              <div style={{ flex: "auto" }}>
+                <ul
+                  style={{
+                    listStyle: "none",
+                    display: "flex",
+                    flexDirection: "column"
+                  }}
+                >
+                  <h1 style={{ flex: "auto" }}>MySQL</h1>
+                  <li style={{ flex: "auto" }}>
+                    <a href="https://github.com/burt23/360/blob/master/server/dbUtils.js#L14-L120">
+                      Writing SQL Queries in Node
+                    </a>
+                  </li>
+                  <li style={{ flex: "auto" }}>
+                    <a href="https://github.com/burt23/360/blob/master/server/schema.sql#L1-L27">
+                      Writing MySQL Schema's
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div style={{ flex: "auto" }}>
+                <ul
+                  style={{
+                    listStyle: "none",
+                    display: "flex",
+                    flexDirection: "column"
+                  }}
+                >
+                  <h1 style={{ flex: "auto" }}>Crypto</h1>
+                  <li style={{ flex: "auto" }}>
+                    <a href="https://github.com/burt23/360/blob/master/server/middleware/hashPassNewUser.js#L29">
+                      Writing Crypto Middleware
+                    </a>
+                  </li>
+                  <li style={{ flex: "auto" }}>
+                    <a href="https://github.com/burt23/360/blob/master/server/index.js#L26">
+                      Using Middleware in Node
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div style={{ flex: "auto" }}>
+                <ul
+                  style={{
+                    listStyle: "none",
+                    display: "flex",
+                    flexDirection: "column"
+                  }}
+                >
+                  <h1 style={{ flex: "auto" }}>React</h1>
+                  <li style={{ flex: "auto" }}>
+                    <a href="https://github.com/burt23/360/blob/master/react/src/index.jsx#L289">
+                      Conditionally rendering page views
+                    </a>
+                  </li>
+                  <li style={{ flex: "auto" }}>
+                    <a href="https://github.com/burt23/360/blob/master/react/src/index.jsx#L242-L265">
+                      Using jQuery Ajax in React
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </Element>
+
         <Element name="fineArt">
-          <Parallax bgImage={image2} strength={500} key={2}>
-            <div style={{ height: 500 }} />
-          </Parallax>
-          <div style={{ display: "flex" }}>
-            <p style={{ padding: "1em", textAlign: "justify" }}>
+          <Gallery />
+          <div style={{ display: "flex", background: "#eee", color: "black" }}>
+            <div style={{ padding: "1em", textAlign: "justify" }}>
+              <h1 style={{ float: "right", padding: "0em 2em" }}>fineArt</h1>
               Throughout my young photographic career I'm grown and transformed
               continually into the artist I am today. Having evoluted with new
               technology, and adopting the tools of the future (lightRoom, HDR,
@@ -180,104 +348,56 @@ class App extends React.Component {
               available for purchase in digital and print formats, with 50% of
               the proceeds going towards the global clean water initiative{" "}
               <a href="https://water.org">Water.org</a>
-            </p>
-            <h1 style={{ padding: "1em", textAlign: "justify" }}>fineArt</h1>
+            </div>
           </div>
         </Element>
-        <Element name="privateList">
-          <Parallax bgImage={image1} strength={500} eventKey="3">
-            <div style={{ height: 500 }} />
-          </Parallax>
-          <div style={{ display: "flex" }}>
-            <h1 style={{ padding: "1em", textAlign: "justify" }}>
-              privateList
-            </h1>
-            <p style={{ padding: "1em", textAlign: "justify" }} key="3">
-              Built out as an exercise in encyrption and security, privateList
-              has grown into a full fledged web app for sharing messages via QR
-              codes and secure access tokens generated in the cloud. Provides an
-              easy way to securely verify access, permissions, and user rights
-              for any sort of private or sensitive information. Easily upload
-              email lists and send out QR codes to validate users quickly and
-              securely. Use cases include online ticket sales, digital good,
-              coupon promo codes, and more.
-            </p>
+        <Element name="weddings">
+          <Gallery />
+          <div style={{ display: "flex", background: "#222" }} key={1}>
+            <div style={{ padding: "2em", textAlign: "justify" }}>
+              <h1
+                style={{ float: "left", padding: "0em 2em" }}
+              >
+                Weddings
+              </h1>
+              I feel fortunate to have had the opportunity to have shared so
+              many celebrations of love, having attended dozens of weddings
+              throughout Northern California. These opportities to document the
+              moments people hold so dearly in different mediums such as photos,
+              videos, and photobooths have given me great satisfaction in the
+              happiness I've brought to people. Previously founder of
+              <a href="https://sfcityhallphoto.com">SF City Hall Photo</a>
+              Currently booking weddings for 2018 and beyond. Please email me
+              directly for serious inquiries{" "}
+              <a href="mailto:mail4mdb@gmail.com">Send email to nowhere</a>
+            </div>
           </div>
         </Element>
-        <Element name="wizardsChess">
-          <Parallax bgImage={image3} strength={500}>
-            <div style={{ height: 500 }} />
-          </Parallax>
+        <Element name="testimonials">
           <div style={{ display: "flex" }}>
-            <p style={{ padding: "1em", textAlign: "justify" }}>
-              Get ready to play the first voice controlled chess game inspired
-              by the legendary Harry Potter books. Challenge a friend, battle
-              yourself, or go head to head with an advanced AI. See if you have
-              the skills it takes to win! Game options include Single Player
-              Mode, and Localhost (1v1), and be sure to stay tuned for the
-              upcoming release of our multiplayer web interface. Voice controls
-              supported in the latest versions of Chrome, and other browsers
-              that are adopting the native browser Speech.API().{" "}
-            </p>
-
-            <h1 id="wiz" style={{ padding: "1em", textAlign: "justify" }}>
-              wizardsChess
-            </h1>
+            <div style={{ padding: "1em", textAlign: "justify" }}>
+              <h1 style={{ float: "left", padding: "0em 2em" }}>
+                Testimonials
+              </h1>
+              A collection of over 30 5 star reviews earned founding the
+              business
+              <a href="https://sfcityhallphoto.com">SF City Hall Photo</a>.
+              These shoots were all weddings at the beautiful City Hall building
+              of San Francisco, a popular distination of couples getting married
+              in the city. The buildings highlights wonderfully detailed
+              architecture, with gorgeous lighting and a stunning backgrounds.
+            </div>
           </div>
-        </Element>
-        <Element name="woodwork">
-          <Parallax bgImage={image2} blur={{ min: -1, max: 3 }}>
-            <div style={{ height: 500 }} />
-          </Parallax>
-          <div style={{ display: "flex" }}>
-            <h1 style={{ padding: "1em", textAlign: "justify" }}>
-              wineBarrelFurnature
-            </h1>
-            <p style={{ padding: "1em", textAlign: "justify" }}>
-              The process of creating tangle goods with my hands provides such a
-              tangle and rewarding satisfaction that it's almost feels as though
-              I'm getting in touch with a connection from a past life. From
-              starting with raw materials, to disassembly, sanding, measuring,
-              building, and finishing, the steps of building a product are paths
-              along the journey to the destination of a finished good. Creating
-              practical pieces that provide value to their users and their
-              owners is at the core of the recycled wineBarrelFurnature I've
-              built along the years. For a list of goods currently available for
-              sale please <a href="mailto:mail4mdb@gmail.com">email me</a>{" "}
-              directly. All pieces were built at{" "}
-              <a href="http://www.speedycreekwinery.com">speedycreekwinery</a>
-            </p>
-          </div>
+          <MasonryGallery />
         </Element>
 
-        <Element name="electronics">
-          <Parallax bgImage={image1} strength={-100}>
-            <div style={{ height: 500 }} />
-          </Parallax>
-          <div style={{ display: "flex" }}>
-            <h1 style={{ padding: "1em", textAlign: "justify" }}>
-              Electronics
-            </h1>
-            <p style={{ padding: "1em", textAlign: "justify" }}>
-              Ever since I got my first eMachines computer in 3rd Grade, I've
-              had a deep facination for electronics, circuits, and science. In
-              college I started tinkering with LED's and robotics, which led me
-              to creating intrique and efficient LED lighting from recycled
-              materials. These projects we're excruciatingly long and tedious,
-              but never stopped to astound me when they were finally finished
-              and working. From combining CREE leds with aluminum bodies strung
-              together with copper wire and brass symbols, to creating
-              cylindrical copper lamps radiating light through hundreds of tiny
-              holes, each piece was truly unique and one-of-a-kind.
-            </p>
-          </div>
-        </Element>
         <Element name="music">
-          <Parallax bgImage={image3} strength={500}>
+          <Parallax bgImage={albumArt} strength={500}>
             <div style={{ height: 500 }} />
           </Parallax>
           <div style={{ display: "flex" }}>
-            <p style={{ padding: "1em", textAlign: "justify" }}>
+            <div style={{ padding: "1em", textAlign: "justify" }}>
+              <h1 style={{ float: "right", padding: "0em 2em" }}>Music</h1>
               My truest passion, music, will always hold the closet to my heart.
               As an outlet for all life has to offer, from the good to the bad,
               getting into the music is fully stepping into the 'zone'. Having
@@ -288,35 +408,33 @@ class App extends React.Component {
               a BOSS RC-30 Loop Pedal, welcome lostLoops Today collabolating,
               and performing offer me the most reward and satisfaction, hit me
               up if you want to <a href="mailto:mail4mdb@gmail.com">jam!</a>
-            </p>
-            <h1 style={{ padding: "1em", textAlign: "justify" }}>Music</h1>
+            </div>
+          </div>
+          <div style={{ maxWidth: "700px", margin: "0 auto" }}>
+            <iframe
+              title="Mottainai"
+              style={{
+                border: "1px solid black",
+                width: "700px",
+                minHeight: "40vh"
+              }}
+              src="https://bandcamp.com/EmbeddedPlayer/album=2523675360/size=large/bgcol=333333/linkcol=2ebd35/tracklist=true/artwork=small/transparent=true/"
+              seamless
+            >
+              <a href="http://dashurpa.bandcamp.com/album/mottainai">
+                Mottainai by dashurpa
+              </a>
+            </iframe>
           </div>
         </Element>
-        <Element name="testimonials">
-          <Parallax bgImage={image2} strength={500}>
-            <div style={{ height: 500 }} />
-          </Parallax>
-          <div style={{ display: "flex" }}>
-            <h1 style={{ padding: "1em", textAlign: "justify" }}>
-              Testimonials
-            </h1>
-            <p>
-              A collection of over 30 5 star reviews earned founding the
-              business{" "}
-              <a href="https://sfcityhallphoto.com">SF City Hall Photo</a>.
-              These shoots were all weddings at the beautiful City Hall building
-              of San Francisco, a popular distination of couples getting married
-              in the city. The buildings highlights wonderfully detailed
-              architecture, with gorgeous lighting and a stunning backgrounds.
-            </p>
-          </div>
-        </Element>
+
         <Element name="about">
-          <Parallax bgImage={image1} strength={500}>
+          <Parallax bgImage={me} strength={500}>
             <div style={{ height: 500 }} />
           </Parallax>
           <div style={{ display: "flex" }}>
-            <p>
+            <div style={{ padding: "1em", textAlign: "justify" }}>
+              <h1 style={{ float: "right", padding: "0em 2em" }}>About</h1>
               Born in San Francisco in the late 80's, I've had a chance to see
               technology in a unique light a the .com boom completely
               transformed my hometown into the technology hub of the world.
@@ -332,8 +450,7 @@ class App extends React.Component {
               efficiencies and reducing waste, more efficient modes of
               transporation, providing health food for our growing population,
               and space colonization.
-            </p>
-            <h1 style={{ padding: "1em", textAlign: "justify" }}>About</h1>
+            </div>
           </div>
         </Element>
         <h2>{"\u2728"}</h2>
@@ -342,51 +459,5 @@ class App extends React.Component {
     return <App />;
   }
 }
-// render(<App />, document.getElementById("root"));
-export default App;
 
-// <ul
-//   style={{
-//     padding: "0.5em",
-//     color: "darkslategrey",
-//     background: "rgba(0,255,255,.1)",
-//     display: "flex",
-//     justifyContent: "space-around",
-//     listStyle: "none",
-//     fontFamily: "arial"
-//   }}
-// >
-//   <li>
-//     <h4>Weddings</h4>
-//     <br />
-//     <p style={{ textAlign: "align" }}>
-//       this is a whole bunch of text about weddings the graetest photogaphy
-//           gigs a man could ever want yeah babay yea hbayabyaabyyba give it to me
-//           girl make it swirl likefs a tootsie pop drop it like its hot can't stop
-//           pock and lock and drop manke it pop you got you got you got y ougotu
-//           ltel l me the truthasdfasdfasfdasdfasdf
-//         </p>
-//   </li>
-//   <li>
-//     <h4>Travel</h4>
-//     <br />
-//     <p>
-//       this is a whole bunch of text about weddings the graetest photogaphy
-//           gigs a man could ever want yeah babay yea hbayabyaabyyba give it to me
-//           girl make it swirl like a tootsie pop drop it like its hot can't stop
-//           pock and lock and drop manke it pop you got you got you got y ougotu
-//           ltel l me the truth
-//         </p>
-//   </li>
-//   <li>
-//     <h4>Events</h4>
-//     <br />
-//     <p>
-//       this is a whole bunch of text about weddings the graetest photogaphy
-//           gigs a man could ever want yeah babay yea hbayabyaabyyba give it to me
-//           girl make it swirl like a tootsie pop drop it like its hot can't stop
-//           pock and lock and drop manke it pop you got you got you got y ougotu
-//           ltel l me the truth
-//         </p>
-//   </li>
-// </ul>
+export default App;

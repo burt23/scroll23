@@ -47,7 +47,7 @@ module.exports = {
         },
         line_linked: {
           enable: true,
-          distance: 150,
+          distance: 50,
           color: "#ffffff",
           opacity: 0.4,
           width: 1

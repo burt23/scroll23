@@ -7,7 +7,7 @@ export default class TypistHero extends React.PureComponent {
     return (
       <Typist>
         <span className="my-custom-class">
-          <h1>Formally, people call me Michael Burton</h1>
+          <h1>Formally people call me Michael Burton</h1>
         </span>
         <br />
         <div className="container">
