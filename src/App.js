@@ -261,8 +261,8 @@ class App extends React.Component {
           </div>
         </Element>
         <Element name="privateList">
-          <div style={{ background: "rgba(14, 127, 204, 0.8)" }}>
-            <PrivateListSVG style={{ background: "lightseagreen" }} />
+          <div style={{ background: "rgba(255,255,255, 0.5)" }}>
+            <PrivateListSVG  style={{ color: 'white', background: "lightseagreen" }} />
             <div style={{ display: "flex", flexDirection: "row" }}>
               <div style={{ flex: "auto" }}>
                 <ul
@@ -332,31 +332,12 @@ class App extends React.Component {
           </div>
         </Element>
 
-        <Element name="fineArt">
-          <Gallery />
-          <div style={{ display: "flex", background: "#eee", color: "black" }}>
-            <div style={{ padding: "1em", textAlign: "justify" }}>
-              <h1 style={{ float: "right", padding: "0em 2em" }}>fineArt</h1>
-              Throughout my young photographic career I'm grown and transformed
-              continually into the artist I am today. Having evoluted with new
-              technology, and adopting the tools of the future (lightRoom, HDR,
-              magicLantern ), I pay homage to the analog counterparts of the
-              latest trends and tricks. This collection of fineArt photography
-              represents the essence of whats crossed my 'eye', and is meant to
-              spark discussion and provoke emotion deep within any audience.
-              Works include travel, event, and night photography. All pieces are
-              available for purchase in digital and print formats, with 50% of
-              the proceeds going towards the global clean water initiative{" "}
-              <a href="https://water.org">Water.org</a>
-            </div>
-          </div>
-        </Element>
         <Element name="weddings">
           <Gallery />
-          <div style={{ display: "flex", background: "#222" }} key={1}>
+          <div style={{ display: "flex", background: "rgba(0,0,0,0.4)" }} key={1}>
             <div style={{ padding: "2em", textAlign: "justify" }}>
               <h1
-                style={{ float: "left", padding: "0em 2em" }}
+                style={{ float: "right", padding: "0em 2em" }}
               >
                 Weddings
               </h1>
@@ -380,12 +361,12 @@ class App extends React.Component {
                 Testimonials
               </h1>
               A collection of over 30 5 star reviews earned founding the
-              business
+              business 
               <a href="https://sfcityhallphoto.com">SF City Hall Photo</a>.
               These shoots were all weddings at the beautiful City Hall building
-              of San Francisco, a popular distination of couples getting married
-              in the city. The buildings highlights wonderfully detailed
-              architecture, with gorgeous lighting and a stunning backgrounds.
+              of San Francisco, a popular destination for couples getting married
+              in the city. The building highlights wonderfully the detailed
+              architecture, with gorgeous lighting across stunning backgrounds.
             </div>
           </div>
           <MasonryGallery />
@@ -399,15 +380,15 @@ class App extends React.Component {
             <div style={{ padding: "1em", textAlign: "justify" }}>
               <h1 style={{ float: "right", padding: "0em 2em" }}>Music</h1>
               My truest passion, music, will always hold the closet to my heart.
-              As an outlet for all life has to offer, from the good to the bad,
-              getting into the music is fully stepping into the 'zone'. Having
-              an understanding of getting into that subconcious space, and
-              literally putting out good vibrations into the universe is a
-              feeling that one must experience to fully understand. I invite you
-              to listen to a samples of my recordings, from experiments in using
-              a BOSS RC-30 Loop Pedal, welcome lostLoops Today collabolating,
-              and performing offer me the most reward and satisfaction, hit me
-              up if you want to <a href="mailto:mail4mdb@gmail.com">jam!</a>
+                           As an outlet for all life has to offer, from the good to the bad,
+                           getting into the music is fully stepping into the 'zone'. Having
+                           an understanding of getting into that subconscious space, and
+                           literally putting out good vibrations into the universe is a
+                           feeling that one must experience to fully understand. I invite you
+                           to listen to samples of my recordings, from experiments in using
+                           a BOSS RC-30 Loop Pedal, welcome lostLoops Today collaborating,
+                           and performing offer me the most reward and satisfaction hit me
+                           up if you want to <a href="mailto:mail4mdb@gmail.com">jam!</a>
             </div>
           </div>
           <div style={{ maxWidth: "700px", margin: "0 auto" }}>
@@ -435,21 +416,7 @@ class App extends React.Component {
           <div style={{ display: "flex" }}>
             <div style={{ padding: "1em", textAlign: "justify" }}>
               <h1 style={{ float: "right", padding: "0em 2em" }}>About</h1>
-              Born in San Francisco in the late 80's, I've had a chance to see
-              technology in a unique light a the .com boom completely
-              transformed my hometown into the technology hub of the world.
-              During college I studied economics during the worst downturn of
-              modern history since the great depression, which afforded me
-              insights into the struggles of the global economy and the possible
-              vectors for survival. Returning to the tech roots that have always
-              been around me I got back into coding fulltime in mid 2016,
-              selling off my photography business and attending Hack Reactor. My
-              current interests in tech revolve around creating more fair and
-              just democractic systems, social justice and equality, cyber
-              security and protecting our online identities, increasing energy
-              efficiencies and reducing waste, more efficient modes of
-              transporation, providing health food for our growing population,
-              and space colonization.
+             Born in San Francisco in the late 80's, I've had a chance to see the technology in a unique light a the .com boom completely transformed my hometown into the technology hub of the world. During college, I studied economics during the worst downturn in modern history since the great depression, which afforded me insights into the struggles of the global economy and the possible vectors for survival. Returning to the tech roots that have always been around me I got back into coding fulltime in mid-2016, selling off my photography business and attending Hack Reactor. My current interests in tech revolve around creating more fair and just democratic systems, social justice and equality, cybersecurity and protecting our online identities, increasing energy efficiencies and reducing waste, more efficient modes of transportation, providing healthy food for our growing population, and space colonization.
             </div>
           </div>
         </Element>

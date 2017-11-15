@@ -89,16 +89,6 @@ class NavBar extends React.Component {
             >
               <Link
                 style={{ display: "block", padding: "0.5em" }}
-                to="fineArt"
-                spy
-                smooth
-                duration={500}
-                offset={-100}
-              >
-                Fine Art
-              </Link>
-              <Link
-                style={{ display: "block", padding: "0.5em" }}
                 to="weddings"
                 spy
                 smooth
