@@ -17,7 +17,6 @@ const flexColumn = {
 };
 
 const Items = items => {
-  console.log("as;ldkfjas;ldkfja;slkdfj", items.list[1]);
   return (
     <li style={flexItem}>
       <h3>

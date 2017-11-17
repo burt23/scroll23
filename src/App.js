@@ -63,6 +63,14 @@ class App extends React.Component {
       textAlign: "center"
     };
 
+    const textStyle = {
+      display: "flex",
+      width: "80vw",
+      margin: "0 auto",
+      padding: "5vw",
+      textAlign: "justify"
+    };
+
     const insideStyles = {
       background: "rgba(0,0,0,0)",
       padding: 20,
@@ -118,7 +126,7 @@ class App extends React.Component {
         </div>
 
         {/* ------------------TRUCK HUNT------------------ */}
-        <Element name="truckHunt">
+        <Element name="truckHunt" style={{background: 'rgba(0,0,0,0.2)'}}>
           <TruckHuntSVG />
           <iframe
             title="truckHuntVideo"
@@ -128,39 +136,27 @@ class App extends React.Component {
             gesture="media"
             allowFullScreen
           />
-          <h1>
-            Order online from your favorite food trucks in SF
-          </h1>
+          <h1>Order online from your favorite food trucks in SF</h1>
           <AppDescriptions descriptors={appText.truckHunt} />
         </Element>
         {/* ------------------WIZARDS CHESS------------------ */}
         <Element name="wizardsChess">
-        <a href="https://wizardschess.club">
-          <WizardsChessSVG />
+          <a href="https://wizardschess.club">
+            <WizardsChessSVG />
           </a>
-          <h1>
-            Voice Controlled Online Chess
-          </h1>
+          <h1>Voice Controlled Online Chess</h1>
           <AppDescriptions descriptors={appText.wizardsChess} />
         </Element>
         {/* ------------------PRIVATE LIST------------------ */}
-        <Element name="privateList">
-          <PrivateListSVG
-            style={{ color: "white", background: "lightseagreen" }}
-          />
-          <h1>
-            Secret Message Society 
-          </h1>
+        <Element name="privateList" style={{background: 'rgba(0,0,0,0.2)'}}>
+          <PrivateListSVG />
+          <h1>Secret Message Society</h1>
           <AppDescriptions descriptors={appText.privateList} />
         </Element>
 
         {/* ------------------WEDDINGS------------------ */}
         <Element name="weddings">
-          <Gallery />
-          <div
-            style={{ display: "flex", background: "rgba(0,0,0,0.4)" }}
-            key={1}
-          >
+          <div style={textStyle}>
             <div style={{ padding: "2em", textAlign: "justify" }}>
               <h1 style={{ float: "right", padding: "0em 2em" }}>Weddings</h1>
               {appText.weddings}
@@ -168,11 +164,12 @@ class App extends React.Component {
               <a href="mailto:mail4mdb@gmail.com">Email Me</a>
             </div>
           </div>
+          <Gallery />
         </Element>
         {/* ------------------TESTIMONIALS------------------ */}
         <Element name="testimonials">
-          <div style={{ display: "flex" }}>
-            <div style={{ padding: "1em", textAlign: "justify" }}>
+          <div style={textStyle}>
+            <div>
               <h1 style={{ float: "left", padding: "0em 2em" }}>
                 Testimonials
               </h1>
@@ -187,14 +184,7 @@ class App extends React.Component {
           <Parallax bgImage={albumArt} strength={500}>
             <div style={{ height: 500 }} />
           </Parallax>
-          <div
-            style={{
-              display: "flex",
-              width: "80vw",
-              margin: "0 auto",
-              padding: "5vw"
-            }}
-          >
+          <div style={textStyle}>
             <div style={{ textAlign: "justify" }}>
               <h1 style={{ float: "right", padding: "0em 2em" }}>Music</h1>
               {appText.music}
@@ -223,14 +213,7 @@ class App extends React.Component {
           <Parallax bgImage={me} strength={500}>
             <div style={{ height: 500 }} />
           </Parallax>
-          <div
-            style={{
-              display: "flex",
-              width: "80vw",
-              margin: "0 auto",
-              padding: "5vw"
-            }}
-          >
+          <div style={textStyle}>
             <div style={{ padding: "1em", textAlign: "justify" }}>
               <h1 style={{ float: "right", padding: "0em 2em" }}>About</h1>
               {appText.about}
