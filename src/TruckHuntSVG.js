@@ -14,7 +14,6 @@ export default class TruckHuntSVG extends React.PureComponent {
         enableBackground="new 0 0 300 100"
         xmlSpace="preserve"
       >
-        <line fill="none" x1="-11.9" y1="41.1" x2="29.1" y2="-9.9" />
         <g>
           <path d="M16.2,78l1.5-3.6C20.2,75.5,23,76,26,76c3.5,0,6.6-0.9,9.3-2.8s5.1-4.8,7.3-8.6c0.7-1.3,1.4-2.7,2-4.4
         c0.7-1.6,1.5-3.9,2.5-6.9c0.8-2.5,1.6-5.1,2.4-7.9c0.8-2.8,1.5-5.4,2-7.8c0.5-2.3,1.1-5,1.6-7.8l4.3-1.9h-0.3l-0.8-0.1

@@ -52,6 +52,7 @@ class NavBar extends React.Component {
           <Nav pullRight>
             <NavDropdown eventKey={1} title="Code" id="basic-nav-dropdown">
               <Link
+                className="scrollLink"
                 style={{ display: "block", padding: "0.5em" }}
                 to="truckHunt"
                 spy
@@ -62,6 +63,7 @@ class NavBar extends React.Component {
                 truckHunt
               </Link>
               <Link
+                className="scrollLink"
                 style={{ display: "block", padding: "0.5em" }}
                 to="wizardsChess"
                 spy
@@ -72,6 +74,7 @@ class NavBar extends React.Component {
                 wizardsChess
               </Link>
               <Link
+                className="scrollLink"
                 style={{ display: "block", padding: "0.5em" }}
                 to="privateList"
                 spy
@@ -88,6 +91,7 @@ class NavBar extends React.Component {
               id="basic-nav-dropdown"
             >
               <Link
+                className="scrollLink"
                 style={{ display: "block", padding: "0.5em" }}
                 to="weddings"
                 spy
@@ -98,6 +102,7 @@ class NavBar extends React.Component {
                 Weddings
               </Link>
               <Link
+                className="scrollLink"
                 style={{ display: "block", padding: "0.5em" }}
                 to="testimonials"
                 spy
@@ -109,12 +114,19 @@ class NavBar extends React.Component {
               </Link>
             </NavDropdown>
             <NavItem eventKey={3}>
-              <Link to="music" spy smooth duration={300} offset={80}>
+              <Link
+                className="scrollLink"
+                to="music"
+                spy
+                smooth
+                duration={700}
+                offset={80}
+              >
                 Music
               </Link>
             </NavItem>
             <NavItem eventKey={6}>
-              <Link to="about" spy smooth duration={900}>
+              <Link className="scrollLink" to="about" spy smooth duration={900}>
                 About
               </Link>
             </NavItem>
