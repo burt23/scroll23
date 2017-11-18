@@ -67,7 +67,6 @@ class App extends React.Component {
       display: "flex",
       width: "80vw",
       margin: "0 auto",
-      padding: "5vw",
       textAlign: "justify"
     };
 
@@ -80,6 +79,11 @@ class App extends React.Component {
       transform: "translate(-50%,-50%)",
       color: "white"
     };
+
+    const svgStyle = {
+      stroke: 'aliceblue',
+      strokeWidth: '0.2px'
+    }
 
     const albumArt = "https://f4.bcbits.com/img/0005527348_100.png";
     const me =
@@ -105,7 +109,7 @@ class App extends React.Component {
 
           {/* ------------------WELCOME PAGE------------------ */}
           <div style={{ height: "100vh", display: "block" }}>
-            <div style={insideStyles}>
+            <div className="welcomeStyle">
               <div id="welcomeLogo">
                 <Logo />
               </div>
@@ -130,7 +134,7 @@ class App extends React.Component {
           <TruckHuntSVG />
           <iframe
             title="truckHuntVideo"
-            style={{ height: "40vh", minWidth: "80vh" }}
+            style={{ height: "40vh", width: '100%' }}
             src="https://www.youtube.com/embed/iVUxqjB9uu4"
             frameBorder="0"
             gesture="media"
@@ -157,8 +161,8 @@ class App extends React.Component {
         {/* ------------------WEDDINGS------------------ */}
         <Element name="weddings">
           <div style={textStyle}>
-            <div style={{ padding: "2em", textAlign: "justify" }}>
-              <h1 style={{ float: "right", padding: "0em 2em" }}>Weddings</h1>
+            <div style={{flex: 'auto'}}>
+              <h1 style={{textAlign:'center'}}>Weddings</h1>
               {appText.weddings}
               <a href="https://sfcityhallphoto.com">SF City Hall Photo</a>
               <a href="mailto:mail4mdb@gmail.com">Email Me</a>
@@ -169,14 +173,16 @@ class App extends React.Component {
         {/* ------------------TESTIMONIALS------------------ */}
         <Element name="testimonials">
           <div style={textStyle}>
-            <div>
-              <h1 style={{ float: "left", padding: "0em 2em" }}>
+            <div style={{flex: 'auto'}}>
+              <h1 style={{textAlign:'center'}}>
                 Testimonials
               </h1>
               {appText.testimonials}
             </div>
           </div>
-          <MasonryGallery />
+          <div style={{maxWidth: '100vw'}}>
+            <MasonryGallery />
+          </div>
         </Element>
 
         {/* ------------------MUSIC------------------ */}
@@ -195,7 +201,7 @@ class App extends React.Component {
               title="Mottainai"
               style={{
                 border: "1px solid black",
-                width: "700px",
+                maxWidth: "700px",
                 minHeight: "40vh"
               }}
               src="https://bandcamp.com/EmbeddedPlayer/album=2523675360/size=large/bgcol=333333/linkcol=2ebd35/tracklist=true/artwork=small/transparent=true/"
@@ -210,7 +216,7 @@ class App extends React.Component {
 
         {/* ------------------ABOUT------------------ */}
         <Element name="about">
-          <Parallax bgImage={me} strength={500}>
+          <Parallax bgImage={me} strength={500} >
             <div style={{ height: 500 }} />
           </Parallax>
           <div style={textStyle}>

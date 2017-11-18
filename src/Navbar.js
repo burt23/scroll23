@@ -32,7 +32,7 @@ class NavBar extends React.Component {
   render() {
     return (
       <Navbar
-        style={{ height: "5vh" }}
+        style={{ height: "5vh", width: '100vw', top: 0, left: 0 }}
         className="white"
         fixedTop
         collapseOnSelect
