@@ -1,318 +1,243 @@
-// import React, { Component } from 'react';
-// import logo from './logo.svg';
-// import './App.css';
-
-// class App extends Component {
-//   render() {
-//     return (
-//       <div className="App">
-//         <header className="App-header">
-//           <img src={logo} className="App-logo" alt="logo" />
-//           <h1 className="App-title">Welcome to my online portfolio</h1>
-//         </header>
-//         <p className="App-intro">
-//           To get started, edit <code>src/App.js</code> and save to reload.
-//         </p>
-//       </div>
-//     );
-//   }
-// }
-
-// export default App;
-
 import React from "react";
-// import { render } from "react-dom";
 import { Parallax } from "react-parallax";
-// import Hello from "./Hello";
-// import ExamplePage from './word'
-// import PC from "react-parallax-component";
+import Navbar from "./Navbar";
+import TypistHero from "./TypistHero";
+import Particles from "react-particles-js";
+import Scroll from "react-scroll";
+import params from "./particleParams.js";
+import Logo from "./logo";
+import DownArrows from "./DownArrows";
+import Gallery from "./Gallery";
+import MasonryGallery from "./MasonryGallery";
+import PrivateListSVG from "./PrivateListSVG";
+import TruckHuntSVG from "./TruckHuntSVG";
+import WizardsChessSVG from "./WizardsChessSVG";
+import AppDescriptions from "./AppDescriptions";
+import appText from "./appText";
 
-const styles = {
-  fontFamily: "sans-serif",
-  textAlign: "center"
-};
+let Link = Scroll.Link;
+let Events = Scroll.Events;
+let Element = Scroll.Element;
+let scroll = Scroll.animateScroll;
+let scrollSpy = Scroll.scrollSpy;
 
-const insideStyles = {
-  background: "rgba(255,255,255,0.8)",
-  fontFamily: "helvetica",
-  padding: 20,
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%,-50%)"
-};
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+    this.init = this.init.bind(this);
+    this.updateMessage = this.updateMessage.bind(this);
+    this.scrollToTop = this.scrollToTop.bind(this);
+  }
 
-const image1 =
-  "https://images.unsplash.com/photo-1498092651296-641e88c3b057?auto=format&fit=crop&w=1778&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D";
-const image2 =
-  "https://v478pa.bn1.livefilestore.com/y2m2yJeC7UfWJ9AiIG8Lm4_K5BiN1yRU84tMlBtxQ-7Llr9oV4XYEYyr8l0j8eXPbFroKrD1f9KKjY_jURbKC5lA_rS6h6mOBZVgCeZknD6I9VAl126yEzdzPTXk0KX_Tdd/air.jpg?psid=1";
-const image3 =
-  "https://brightcove04pmdo-a.akamaihd.net/5104226627001/5104226627001_5297440765001_5280261645001-vs.jpg?pubId=5104226627001&videoId=5280261645001";
+  componentDidMount() {
+    scrollSpy.update();
+  }
 
-const App = () => (
-  <div style={styles}>
-    <nav
-      style={{
-        position: "fixed",
-        height: "5vh",
-        top: 0,
-        left: 0,
-        width: "100vw",
-        background: "rgba(0,0,0,0.8)",
-        zIndex: 888,
-        color: "white"
-      }}
-    >
-      <ul
-        style={{
-          display: "flex",
-          top: 0,
-          justifyContent: "flex-end",
-          fontSize: "1em",
-          listStyle: "none",
-          width: "100%"
-        }}
-      >
-        <li
-          style={{
-            fontSize: "2em",
-            flex: "1",
-            alignContent: "start",
-            textAlign: "left"
-          }}
-        >
-          michaelBurton
-        </li>
-        <li
-          style={{ flex: "0 1 auto", justifySelf: "end", padding: "0em 2em" }}
-        >
-          weddings
-        </li>
-        <li style={{ flex: "0", justifySelf: "end", padding: "0em 2em" }}>
-          fineArt
-        </li>
-        <li style={{ flex: "0", justifySelf: "end", padding: "0em 2em" }}>
-          privateList
-        </li>
-        <li
-          style={{ flex: "0", justifySelf: "end", padding: "0em 2em 0em 0em" }}
-        >
-          wizardsChess
-        </li>
-        <li
-          style={{ flex: "0", justifySelf: "end", padding: "0em 2em 0em 0em" }}
-        >
-          furnature
-        </li>
-        <li
-          style={{ flex: "0", justifySelf: "end", padding: "0em 2em 0em 0em" }}
-        >
-          electronics
-        </li>
-        <li
-          style={{ flex: "0", justifySelf: "end", padding: "0em 2em 0em 0em" }}
-        >
-          music
-        </li>
-        <li
-          style={{ flex: "0", justifySelf: "end", padding: "0em 2em 0em 0em" }}
-        >
-          testimonials
-        </li>
-        <li
-          style={{ flex: "0", justifySelf: "end", padding: "0em 2em 0em 0em" }}
-        >
-          about
-        </li>
-      </ul>
-    </nav>
-    <div style={{ height: "5vh" }} />
-    <Parallax bgImage={image3} strength={500}>
-      <div style={{ height: 500, display: "block" }}>
-        <div style={insideStyles}>
-          <h1>Weddings</h1>
-        </div>
-      </div>
-    </Parallax>
-    <div style={{ display: "flex" }}>
-      <h1 style={{ padding: "1em" }}>Weddings</h1>
-      <p style={{ padding: "1em", textAlign: "justify" }}>
-        Wedding photography highlight from my former company{" "}
-        <a href="https://sfcityhallphoto.com">SF City Hall Photo</a>, and other
-        weddings and events throughout Northern California. Currently booking
-        weddings for 2018 and beyond. Please email me directly for serious
-        inquiries <a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>
-      </p>
-    </div>
-    <Parallax bgImage={image2} strength={500}>
-      <div style={{ height: 500 }}>
-        <div style={insideStyles}>
-          <h1>fineArt</h1>
-        </div>
-      </div>
-    </Parallax>
-    <div style={{ display: "flex" }}>
-      <p style={{ padding: "1em", textAlign: "justify" }}>
-        voice controlled chess game inspired by the harry potter books. works on
-        chrome 50+. Play single player against a challenging AI or play locally
-        on your device with an opponent or against yourself. Build with React,
-        Express, and the in browser google speech API
-      </p>
-      <h1 style={{ padding: "1em", textAlign: "justify" }}>fineArt</h1>
-    </div>
-    <Parallax bgImage={image1} strength={500}>
-      <div style={{ height: 500 }}>
-        <div style={insideStyles}>
-          <h1>privateList</h1>
-        </div>
-      </div>
-    </Parallax>
-    <div style={{ display: "flex" }}>
-      <h1 style={{ padding: "1em", textAlign: "justify" }}>privateList</h1>
-      <p style={{ padding: "1em", textAlign: "justify" }}>
-        voice controlled chess game inspired by the harry potter books. works on
-        chrome 50+
-      </p>
-    </div>
-    <Parallax bgImage={image3} strength={500}>
-      <div style={{ height: 500 }}>
-        <div style={insideStyles}>
-          <h1>wizardsChess</h1>
-        </div>
-      </div>
-    </Parallax>
-    <div style={{ display: "flex" }}>
-      <p style={{ padding: "1em", textAlign: "justify" }}>
-        voice controlled chess game inspired by the harry potter books. works on
-        chrome 50+. Play single player against a challenging AI or play locally
-        on your device with an opponent or against yourself. Build with React,
-        Express, and the in browser google speech API
-      </p>
-      <h1 style={{ padding: "1em", textAlign: "justify" }}>wizardsChess</h1>
-    </div>
-    <Parallax bgImage={image2} blur={{ min: -1, max: 3 }}>
-      <div style={{ height: 500 }}>
-        <div style={insideStyles}>
-          <h1>wineBarrelFurnature</h1>
-        </div>
-      </div>
-    </Parallax>
-    <div style={{ display: "flex" }}>
-      <h1 style={{ padding: "1em", textAlign: "justify" }}>
-        wineBarrelFurnature
-      </h1>
-      <p style={{ padding: "1em", textAlign: "justify" }}>
-        voice controlled chess game inspired by the harry potter books. works on
-        chrome 50+. Play single player against a challenging AI or play locally
-        on your device with an opponent or against yourself. Build with React,
-        Express, and the in browser google speech API
-      </p>
-    </div>
+  componentWillUnmount() {
+    Events.scrollEvent.remove("begin");
+    Events.scrollEvent.remove("end");
+  }
 
-    <Parallax bgImage={image1} strength={-100}>
-      <div style={{ height: 500 }}>
-        <div style={insideStyles}>
-          <h1>electronics</h1>
-        </div>
-      </div>
-    </Parallax>
-    <div style={{ display: "flex" }}>
-      <h1 style={{ padding: "1em", textAlign: "justify" }}>Electronics</h1>
-      <p style={{ padding: "1em", textAlign: "justify" }}>
-        Wedding photography highlight from my former company{" "}
-        <a href="https://sfcityhallphoto.com">SF City Hall Photo</a>, and other
-        weddings and events throughout Northern California. Currently booking
-        weddings for 2018 and beyond. Please email me directly for serious
-        inquiries <a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>
-      </p>
-    </div>
-    <Parallax bgImage={image3} strength={500}>
-      <div style={{ height: 500 }}>
-        <div style={insideStyles}>
-          <h1>Music</h1>
-        </div>
-      </div>
-    </Parallax>
-    <div style={{ display: "flex" }}>
-      <p style={{ padding: "1em", textAlign: "justify" }}>
-        voice controlled chess game inspired by the harry potter books. works on
-        chrome 50+. Play single player against a challenging AI or play locally
-        on your device with an opponent or against yourself. Build with React,
-        Express, and the in browser google speech API
-      </p>
-      <h1 style={{ padding: "1em", textAlign: "justify" }}>Music</h1>
-    </div>
-    <Parallax bgImage={image2} strength={500}>
-      <div style={{ height: 500 }}>
-        <div style={insideStyles}>
-          <h1>Testimonials</h1>
-        </div>
-      </div>
-    </Parallax>
-    <div style={{ display: "flex" }}>
-      <h1 style={{ padding: "1em", textAlign: "justify" }}>Testimonials</h1>
-      <p>
-        voice controlled chess game inspired by the harry potter books. works on
-        chrome 50+
-      </p>
-    </div>
-    <Parallax bgImage={image1} strength={500}>
-      <div style={{ height: 500 }}>
-        <div style={insideStyles}>
-          <h1>About</h1>
-        </div>
-      </div>
-    </Parallax>
+  scrollToTop() {
+    scroll.scrollToTop();
+  }
 
-    <h2>{"\u2728"}</h2>
-  </div>
-);
+  updateMessage() {
+    console.log("updating messages");
+    // setTimeout(this.init, 6000);
+  }
+  init() {
+    console.log("yep", this.state.currentMessage);
+    this.setState({
+      currentMessage: this.state.messages[this.state.counter],
+      counter:
+        this.state.counter < this.state.messages.length - 1
+          ? this.state.counter + 1
+          : 0
+    });
+    this.updateMessage();
+  }
+  render() {
+    const styles = {
+      textAlign: "center"
+    };
 
-// render(<App />, document.getElementById("root"));
+    const textStyle = {
+      display: "flex",
+      width: "80vw",
+      margin: "0 auto",
+      textAlign: "justify",
+      padding: "2em 0"
+    };
+
+    const headerStyle = {
+      textAlign: "center",
+      padding: "1em 0"
+    };
+
+    const insideStyles = {
+      background: "rgba(0,0,0,0)",
+      padding: 20,
+      position: "absolute",
+      top: "50%",
+      left: "50%",
+      transform: "translate(-50%,-50%)",
+      color: "white"
+    };
+
+    const svgStyle = {
+      stroke: "aliceblue",
+      strokeWidth: "0.2px"
+    };
+
+    const albumArt = "https://f4.bcbits.com/img/0005527348_100.png";
+    const me =
+      "https://scontent.fsnc1-1.fna.fbcdn.net/v/t1.0-9/14463157_134819846977042_9157923054910920849_n.jpg?oh=b4794833576f5d089b4b236c21b13622&oe=5A9FE0C0";
+
+    const App = () => (
+      <div style={styles}>
+        <Navbar />
+
+        <div>
+          {/* ------------------SET PARTICLE BACKGROUND------------------ */}
+          <Particles
+            params={params}
+            style={{
+              position: "fixed",
+              top: 0,
+              left: 0,
+              height: "100vh",
+              width: "100vw",
+              zIndex: -9999
+            }}
+          />
+
+          {/* ------------------WELCOME PAGE------------------ */}
+          <div style={{ height: "100vh", display: "block" }}>
+            <div className="welcomeStyle">
+              <div id="welcomeLogo">
+                <Logo />
+              </div>
+              <TypistHero />
+            </div>
+            <div>
+              <Link
+                to="truckHunt"
+                className="scrollLink"
+                spy
+                smooth
+                duration={500}
+              >
+                <DownArrows />
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* ------------------TRUCK HUNT------------------ */}
+        <Element name="truckHunt" style={{ background: "rgba(0,0,0,0.2)" }}>
+          <TruckHuntSVG />
+          <iframe
+            title="truckHuntVideo"
+            style={{ height: "40vh", width: "100%" }}
+            src="https://www.youtube.com/embed/iVUxqjB9uu4"
+            frameBorder="0"
+            gesture="media"
+            allowFullScreen
+          />
+          <h1 style={headerStyle}>Order online from your favorite food trucks in SF</h1>
+          <AppDescriptions descriptors={appText.truckHunt} />
+        </Element>
+        {/* ------------------WIZARDS CHESS------------------ */}
+        <Element name="wizardsChess">
+          <a href="https://wizardschess.club">
+            <WizardsChessSVG />
+          </a>
+          <h1 style={headerStyle}>Voice Controlled Online Chess</h1>
+          <AppDescriptions descriptors={appText.wizardsChess} />
+        </Element>
+        {/* ------------------PRIVATE LIST------------------ */}
+        <Element name="privateList" style={{ background: "rgba(0,0,0,0.2)" }}>
+          <PrivateListSVG />
+          <h1 style={headerStyle}>Secret Message Society</h1>
+          <AppDescriptions descriptors={appText.privateList} />
+        </Element>
+
+        {/* ------------------WEDDINGS------------------ */}
+        <Element name="weddings">
+          <div style={textStyle}>
+            <div style={{ flex: "auto" }}>
+              <h1 style={headerStyle}>Weddings</h1>
+              {appText.weddings}
+              <br />
+              <a href="https://sfcityhallphoto.com">SF City Hall Photo</a>
+              <br />
+              <a href="mailto:mail4mdb@gmail.com">Email Me</a>
+            </div>
+          </div>
+          <Gallery />
+        </Element>
+        {/* ------------------TESTIMONIALS------------------ */}
+        <Element name="testimonials">
+          <div style={textStyle}>
+            <div style={{ flex: "auto" }}>
+              <h1 style={headerStyle}>Testimonials</h1>
+              {appText.testimonials}
+            </div>
+          </div>
+          <div style={{ maxWidth: "100vw" }}>
+            <MasonryGallery />
+          </div>
+        </Element>
+
+        {/* ------------------MUSIC------------------ */}
+        <Element name="music">
+          <Parallax bgImage={albumArt} strength={500}>
+            <div style={{ height: 500 }} />
+          </Parallax>
+          <div style={textStyle}>
+            <div style={{ textAlign: "justify" }}>
+              <h1 style={headerStyle}>Music</h1>
+              {appText.music}
+            </div>
+          </div>
+          <div style={{ maxWidth: "700px", margin: "0 auto" }}>
+            <iframe
+              title="Mottainai"
+              style={{
+                border: "1px solid black",
+                maxWidth: "700px",
+                minHeight: "40vh",
+                marginBottom: '2em'
+              }}
+              src="https://bandcamp.com/EmbeddedPlayer/album=2523675360/size=large/bgcol=333333/linkcol=2ebd35/tracklist=true/artwork=small/transparent=true/"
+              seamless
+            >
+              <a href="http://dashurpa.bandcamp.com/album/mottainai">
+                Mottainai by dashurpa
+              </a>
+            </iframe>
+          </div>
+        </Element>
+
+        {/* ------------------ABOUT------------------ */}
+        <Element name="about">
+          <Parallax bgImage={me} strength={500}>
+            <div style={{ minHeight: '40vh'}} />
+          </Parallax>
+          <div style={textStyle}>
+            <div style={{ padding: "1em", textAlign: "justify" }}>
+              <h1 style={headerStyle}>About</h1>
+              {appText.about}
+            </div>
+          </div>
+        </Element>
+        <h2>{"\u2728"}</h2>
+      </div>
+    );
+    return <App />;
+  }
+}
+
 export default App;
-
-// <ul
-//   style={{
-//     padding: "0.5em",
-//     color: "darkslategrey",
-//     background: "rgba(0,255,255,.1)",
-//     display: "flex",
-//     justifyContent: "space-around",
-//     listStyle: "none",
-//     fontFamily: "arial"
-//   }}
-// >
-//   <li>
-//     <h4>Weddings</h4>
-//     <br />
-//     <p style={{ textAlign: "align" }}>
-//       this is a whole bunch of text about weddings the graetest photogaphy
-//           gigs a man could ever want yeah babay yea hbayabyaabyyba give it to me
-//           girl make it swirl likefs a tootsie pop drop it like its hot can't stop
-//           pock and lock and drop manke it pop you got you got you got y ougotu
-//           ltel l me the truthasdfasdfasfdasdfasdf
-//         </p>
-//   </li>
-//   <li>
-//     <h4>Travel</h4>
-//     <br />
-//     <p>
-//       this is a whole bunch of text about weddings the graetest photogaphy
-//           gigs a man could ever want yeah babay yea hbayabyaabyyba give it to me
-//           girl make it swirl like a tootsie pop drop it like its hot can't stop
-//           pock and lock and drop manke it pop you got you got you got y ougotu
-//           ltel l me the truth
-//         </p>
-//   </li>
-//   <li>
-//     <h4>Events</h4>
-//     <br />
-//     <p>
-//       this is a whole bunch of text about weddings the graetest photogaphy
-//           gigs a man could ever want yeah babay yea hbayabyaabyyba give it to me
-//           girl make it swirl like a tootsie pop drop it like its hot can't stop
-//           pock and lock and drop manke it pop you got you got you got y ougotu
-//           ltel l me the truth
-//         </p>
-//   </li>
-// </ul>
