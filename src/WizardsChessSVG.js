@@ -15,7 +15,6 @@ export default class WizardsChessSVG extends React.PureComponent {
         enableBackground="new 0 0 300 100"
         xmlSpace="preserve"
       >
-        <line fill="none" x1="-11.9" y1="41.1" x2="29.1" y2="-9.9" />
         <g>
           <path d="M58.4,31.9l3.2-1.3c-0.1,8.8-2.6,18.5-7.7,29.1c-1.5,3.2-3.1,6.2-4.8,8.9c-1.7,2.7-3.2,4.8-4.5,6.1
         c-0.9,0.9-1.6,1.6-2.2,1.9c-0.6,0.4-1.3,0.6-1.9,0.6c-1.1,0-1.9-0.5-2.3-1.4c-0.4-0.9-0.6-2.7-0.6-5.2c0-2,0-3.5,0-4.5
