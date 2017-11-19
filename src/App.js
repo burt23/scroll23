@@ -67,7 +67,13 @@ class App extends React.Component {
       display: "flex",
       width: "80vw",
       margin: "0 auto",
-      textAlign: "justify"
+      textAlign: "justify",
+      padding: "2em 0"
+    };
+
+    const headerStyle = {
+      textAlign: "center",
+      padding: "1em 0"
     };
 
     const insideStyles = {
@@ -81,9 +87,9 @@ class App extends React.Component {
     };
 
     const svgStyle = {
-      stroke: 'aliceblue',
-      strokeWidth: '0.2px'
-    }
+      stroke: "aliceblue",
+      strokeWidth: "0.2px"
+    };
 
     const albumArt = "https://f4.bcbits.com/img/0005527348_100.png";
     const me =
@@ -130,17 +136,17 @@ class App extends React.Component {
         </div>
 
         {/* ------------------TRUCK HUNT------------------ */}
-        <Element name="truckHunt" style={{background: 'rgba(0,0,0,0.2)'}}>
+        <Element name="truckHunt" style={{ background: "rgba(0,0,0,0.2)" }}>
           <TruckHuntSVG />
           <iframe
             title="truckHuntVideo"
-            style={{ height: "40vh", width: '100%' }}
+            style={{ height: "40vh", width: "100%" }}
             src="https://www.youtube.com/embed/iVUxqjB9uu4"
             frameBorder="0"
             gesture="media"
             allowFullScreen
           />
-          <h1>Order online from your favorite food trucks in SF</h1>
+          <h1 style={headerStyle}>Order online from your favorite food trucks in SF</h1>
           <AppDescriptions descriptors={appText.truckHunt} />
         </Element>
         {/* ------------------WIZARDS CHESS------------------ */}
@@ -148,23 +154,25 @@ class App extends React.Component {
           <a href="https://wizardschess.club">
             <WizardsChessSVG />
           </a>
-          <h1>Voice Controlled Online Chess</h1>
+          <h1 style={headerStyle}>Voice Controlled Online Chess</h1>
           <AppDescriptions descriptors={appText.wizardsChess} />
         </Element>
         {/* ------------------PRIVATE LIST------------------ */}
-        <Element name="privateList" style={{background: 'rgba(0,0,0,0.2)'}}>
+        <Element name="privateList" style={{ background: "rgba(0,0,0,0.2)" }}>
           <PrivateListSVG />
-          <h1>Secret Message Society</h1>
+          <h1 style={headerStyle}>Secret Message Society</h1>
           <AppDescriptions descriptors={appText.privateList} />
         </Element>
 
         {/* ------------------WEDDINGS------------------ */}
         <Element name="weddings">
           <div style={textStyle}>
-            <div style={{flex: 'auto'}}>
-              <h1 style={{textAlign:'center'}}>Weddings</h1>
+            <div style={{ flex: "auto" }}>
+              <h1 style={headerStyle}>Weddings</h1>
               {appText.weddings}
+              <br />
               <a href="https://sfcityhallphoto.com">SF City Hall Photo</a>
+              <br />
               <a href="mailto:mail4mdb@gmail.com">Email Me</a>
             </div>
           </div>
@@ -173,14 +181,12 @@ class App extends React.Component {
         {/* ------------------TESTIMONIALS------------------ */}
         <Element name="testimonials">
           <div style={textStyle}>
-            <div style={{flex: 'auto'}}>
-              <h1 style={{textAlign:'center'}}>
-                Testimonials
-              </h1>
+            <div style={{ flex: "auto" }}>
+              <h1 style={headerStyle}>Testimonials</h1>
               {appText.testimonials}
             </div>
           </div>
-          <div style={{maxWidth: '100vw'}}>
+          <div style={{ maxWidth: "100vw" }}>
             <MasonryGallery />
           </div>
         </Element>
@@ -192,7 +198,7 @@ class App extends React.Component {
           </Parallax>
           <div style={textStyle}>
             <div style={{ textAlign: "justify" }}>
-              <h1 style={{ float: "right", padding: "0em 2em" }}>Music</h1>
+              <h1 style={headerStyle}>Music</h1>
               {appText.music}
             </div>
           </div>
@@ -202,7 +208,8 @@ class App extends React.Component {
               style={{
                 border: "1px solid black",
                 maxWidth: "700px",
-                minHeight: "40vh"
+                minHeight: "40vh",
+                marginBottom: '2em'
               }}
               src="https://bandcamp.com/EmbeddedPlayer/album=2523675360/size=large/bgcol=333333/linkcol=2ebd35/tracklist=true/artwork=small/transparent=true/"
               seamless
@@ -216,12 +223,12 @@ class App extends React.Component {
 
         {/* ------------------ABOUT------------------ */}
         <Element name="about">
-          <Parallax bgImage={me} strength={500} >
-            <div style={{ height: 500 }} />
+          <Parallax bgImage={me} strength={500}>
+            <div style={{ minHeight: '40vh'}} />
           </Parallax>
           <div style={textStyle}>
             <div style={{ padding: "1em", textAlign: "justify" }}>
-              <h1 style={{ float: "right", padding: "0em 2em" }}>About</h1>
+              <h1 style={headerStyle}>About</h1>
               {appText.about}
             </div>
           </div>

@@ -5,7 +5,7 @@ var masonryOptions = {
   transitionDuration: 1,
   gutter: 10,
   fitWidth: 'true',
-  columnWidth: 60,
+  // columnWidth: 60,
 };
 
 const photos = [
