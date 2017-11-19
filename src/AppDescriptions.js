@@ -7,17 +7,18 @@ const descriptorWrapper = {
 };
 
 const flexItem = {
-  flex: "auto"
+  flex: "auto",
+  padding: '1em'
 };
 
 const flexColumn = {
   listStyle: "none",
   display: "flex",
-  flexDirection: "column"
+  flexDirection: "column",
+  padding: '1em'
 };
 
 const Items = items => {
-  console.log("as;ldkfjas;ldkfja;slkdfj", items.list[1]);
   return (
     <li style={flexItem}>
       <h3>

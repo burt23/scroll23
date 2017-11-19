@@ -3,9 +3,11 @@ var Masonry = require("react-masonry-component");
 
 var masonryOptions = {
   transitionDuration: 1,
-  // gutter: 10,
-  columnWidth: 60
+  gutter: 10,
+  fitWidth: 'true',
+  // columnWidth: 60,
 };
+
 const photos = [
   {
     src:
@@ -121,22 +123,25 @@ export default class MasonryGallery extends React.Component {
   render() {
     var childElements = photos.map((photo) => {
       return (
-        <li className="masonryImage" key={photo.src}>
-          <img src={photo.src} />
-        </li>
+        // <li className="masonryImage" key={photo.src}>
+          <img style={{padding: '1em 0'}} className="masonryImage" key={photo.src} src={photo.src} />
+        // </li>
       );
     });
 
     return (
+      <div style={{ margin: '0 auto', width: '100vw' }}>
       <Masonry
         className={"masonryGallery"} // default ''
-        elementType={"ul"} // default 'div'
+        elementType={"div"} // default 'div'
         options={masonryOptions} // default {}
         disableImagesLoaded={false} // default false
         updateOnEachImageLoad={false} // default false and works only if disableImagesLoaded is false
       >
         {childElements}
       </Masonry>
+      </div>
     );
   }
 }
+
