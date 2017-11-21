@@ -96,7 +96,6 @@ class App extends React.Component {
                 spy
                 smooth
                 duration={500}
-                kkk
               >
                 <DownArrows />
               </Link>
