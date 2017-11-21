@@ -135,7 +135,7 @@ class NavBar extends React.Component {
         <Navbar.Collapse id="navBarRightMobile">
           <Nav pullRight>
             <NavItem>
-              hello
+          {/* TODO: ADD MOBILE MENU */}
             </NavItem>
           </Nav>
         </Navbar.Collapse>

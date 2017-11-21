@@ -96,7 +96,8 @@ class App extends React.Component {
                 spy
                 smooth
                 duration={500}
-  kkk            >
+                kkk
+              >
                 <DownArrows />
               </Link>
             </div>
@@ -114,7 +115,9 @@ class App extends React.Component {
             gesture="media"
             allowFullScreen
           />
-          <h1 style={headerStyle}>Order online from your favorite food trucks in SF</h1>
+          <h1 style={headerStyle}>
+            Order online from your favorite food trucks in SF
+          </h1>
           <AppDescriptions descriptors={appText.truckHunt} />
         </Element>
         {/* ------------------WIZARDS CHESS------------------ */}
@@ -127,7 +130,7 @@ class App extends React.Component {
         </Element>
         {/* ------------------PRIVATE LIST------------------ */}
         <Element name="privateList" style={{ background: "rgba(0,0,0,0.2)" }}>
-          <PrivateListSVG style={{textAlign: 'center'}}/>
+          <PrivateListSVG />
           <h1 style={headerStyle}>Secret Message Society</h1>
           <AppDescriptions descriptors={appText.privateList} />
         </Element>
@@ -177,7 +180,7 @@ class App extends React.Component {
                 border: "1px solid black",
                 maxWidth: "700px",
                 minHeight: "40vh",
-                marginBottom: '2em'
+                marginBottom: "2em"
               }}
               src="https://bandcamp.com/EmbeddedPlayer/album=2523675360/size=large/bgcol=333333/linkcol=2ebd35/tracklist=true/artwork=small/transparent=true/"
               seamless
@@ -192,7 +195,7 @@ class App extends React.Component {
         {/* ------------------ABOUT------------------ */}
         <Element name="about">
           <Parallax bgImage={me} strength={500}>
-            <div style={{ minHeight: '40vh'}} />
+            <div style={{ minHeight: "40vh" }} />
           </Parallax>
           <div style={textStyle}>
             <div style={{ padding: "1em", textAlign: "justify" }}>
