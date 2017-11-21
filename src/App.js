@@ -25,8 +25,6 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
-    this.init = this.init.bind(this);
-    this.updateMessage = this.updateMessage.bind(this);
     this.scrollToTop = this.scrollToTop.bind(this);
   }
 
@@ -43,21 +41,6 @@ class App extends React.Component {
     scroll.scrollToTop();
   }
 
-  updateMessage() {
-    console.log("updating messages");
-    // setTimeout(this.init, 6000);
-  }
-  init() {
-    console.log("yep", this.state.currentMessage);
-    this.setState({
-      currentMessage: this.state.messages[this.state.counter],
-      counter:
-        this.state.counter < this.state.messages.length - 1
-          ? this.state.counter + 1
-          : 0
-    });
-    this.updateMessage();
-  }
   render() {
     const styles = {
       textAlign: "center"
@@ -74,21 +57,6 @@ class App extends React.Component {
     const headerStyle = {
       textAlign: "center",
       padding: "1em 0"
-    };
-
-    const insideStyles = {
-      background: "rgba(0,0,0,0)",
-      padding: 20,
-      position: "absolute",
-      top: "50%",
-      left: "50%",
-      transform: "translate(-50%,-50%)",
-      color: "white"
-    };
-
-    const svgStyle = {
-      stroke: "aliceblue",
-      strokeWidth: "0.2px"
     };
 
     const albumArt = "https://f4.bcbits.com/img/0005527348_100.png";
@@ -146,7 +114,9 @@ class App extends React.Component {
             gesture="media"
             allowFullScreen
           />
-          <h1 style={headerStyle}>Order online from your favorite food trucks in SF</h1>
+          <h1 style={headerStyle}>
+            Order online from your favorite food trucks in SF
+          </h1>
           <AppDescriptions descriptors={appText.truckHunt} />
         </Element>
         {/* ------------------WIZARDS CHESS------------------ */}
@@ -209,7 +179,7 @@ class App extends React.Component {
                 border: "1px solid black",
                 maxWidth: "700px",
                 minHeight: "40vh",
-                marginBottom: '2em'
+                marginBottom: "2em"
               }}
               src="https://bandcamp.com/EmbeddedPlayer/album=2523675360/size=large/bgcol=333333/linkcol=2ebd35/tracklist=true/artwork=small/transparent=true/"
               seamless
@@ -224,7 +194,7 @@ class App extends React.Component {
         {/* ------------------ABOUT------------------ */}
         <Element name="about">
           <Parallax bgImage={me} strength={500}>
-            <div style={{ minHeight: '40vh'}} />
+            <div style={{ minHeight: "40vh" }} />
           </Parallax>
           <div style={textStyle}>
             <div style={{ padding: "1em", textAlign: "justify" }}>
