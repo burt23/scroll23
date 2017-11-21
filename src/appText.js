@@ -12,27 +12,27 @@ module.exports = {
       header: "React/Redux",
       links: [
         "Dispatching Actions from Authentication Portal",
-        "https://github.com/TutelaryToads/TutelaryToads/blob/master/client/src/containers/Login.jsx#L138-L152",
+        "https://github.com/truck-hunters/TruckHunt/blob/master/client/src/containers/Login.jsx#L138-L154",
         "Using Isomorphic-Fetch and Redux",
-        "https://github.com/TutelaryToads/TutelaryToads/blob/master/client/src/actions/signupActions.js#L60-L83"
+        "https://github.com/truck-hunters/TruckHunt/blob/master/client/src/actions/signupActions.js#L45-L84"
       ]
     },
     {
       header: "Node/Express",
       links: [
-        "Using dotenv in production Node",
-        "https://github.com/TutelaryToads/TutelaryToads/blob/master/server/server.js#L3-L6",
-        "Writing clean route handlers",
-        "https://github.com/TutelaryToads/TutelaryToads/blob/master/server/requestHandler.js"
+        "Chaining Promises",
+        "https://github.com/truck-hunters/TruckHunt/blob/master/server/routes/vendorSignup.js#L8-L31",
+        "Writing readable API endpoints",
+        "https://github.com/truck-hunters/TruckHunt/blob/master/server/server.js#L24-L50"
       ]
     },
     {
       header: "Stripe API",
       links: [
         "How to write Stripe OAUTH request parameters",
-        "https://github.com/TutelaryToads/TutelaryToads/blob/master/server/routes/stripeAuthorization.js#L8-L21",
+        "https://github.com/truck-hunters/TruckHunt/blob/master/server/routes/stripeAuthorization.js#L5-L30",
         "Passing OAUTH endpoint optional queries via state",
-        "https://github.com/TutelaryToads/TutelaryToads/blob/master/server/routes/stripeCallback.js#L2-L4"
+        "https://github.com/truck-hunters/TruckHunt/blob/master/server/routes/stripeCallback.js#L8"
       ]
     }
   ],

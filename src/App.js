@@ -159,7 +159,7 @@ class App extends React.Component {
         </Element>
         {/* ------------------PRIVATE LIST------------------ */}
         <Element name="privateList" style={{ background: "rgba(0,0,0,0.2)" }}>
-          <PrivateListSVG />
+          <PrivateListSVG style={{textAlign: 'center'}}/>
           <h1 style={headerStyle}>Secret Message Society</h1>
           <AppDescriptions descriptors={appText.privateList} />
         </Element>

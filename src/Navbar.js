@@ -134,7 +134,9 @@ class NavBar extends React.Component {
         </Navbar.Collapse>
         <Navbar.Collapse id="navBarRightMobile">
           <Nav pullRight>
-            <NavItem />
+            <NavItem>
+              hello
+            </NavItem>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
