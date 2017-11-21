@@ -10,9 +10,9 @@ export default class PrivateListSVG extends React.PureComponent {
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
         x="0px"
-        y="0px"
-        viewBox="0 0 300 100"
-        enableBackground="new 0 0 300 100"
+        y="0vh"
+        viewBox="-100 0 500 100"
+        enableBackground="new -100 0 500 100"
         xmlSpace="preserve"
       >
         <g>

@@ -25,8 +25,6 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
-    this.init = this.init.bind(this);
-    this.updateMessage = this.updateMessage.bind(this);
     this.scrollToTop = this.scrollToTop.bind(this);
   }
 
@@ -43,21 +41,6 @@ class App extends React.Component {
     scroll.scrollToTop();
   }
 
-  updateMessage() {
-    console.log("updating messages");
-    // setTimeout(this.init, 6000);
-  }
-  init() {
-    console.log("yep", this.state.currentMessage);
-    this.setState({
-      currentMessage: this.state.messages[this.state.counter],
-      counter:
-        this.state.counter < this.state.messages.length - 1
-          ? this.state.counter + 1
-          : 0
-    });
-    this.updateMessage();
-  }
   render() {
     const styles = {
       textAlign: "center"
@@ -74,21 +57,6 @@ class App extends React.Component {
     const headerStyle = {
       textAlign: "center",
       padding: "1em 0"
-    };
-
-    const insideStyles = {
-      background: "rgba(0,0,0,0)",
-      padding: 20,
-      position: "absolute",
-      top: "50%",
-      left: "50%",
-      transform: "translate(-50%,-50%)",
-      color: "white"
-    };
-
-    const svgStyle = {
-      stroke: "aliceblue",
-      strokeWidth: "0.2px"
     };
 
     const albumArt = "https://f4.bcbits.com/img/0005527348_100.png";
@@ -128,7 +96,7 @@ class App extends React.Component {
                 spy
                 smooth
                 duration={500}
-              >
+  kkk            >
                 <DownArrows />
               </Link>
             </div>

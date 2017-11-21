@@ -11,8 +11,8 @@ export default class TruckHuntSVG extends React.PureComponent {
         xmlnsXlink="http://www.w3.org/1999/xlink"
         x="0px"
         y="0px"
-        viewBox="0 0 300 100"
-        enableBackground="new 0 0 300 100"
+        viewBox="-100 0 500 100"
+        enableBackground="new -100 0 500 100"
         xmlSpace="preserve"
       >
         <g>
