@@ -9,6 +9,9 @@ let Events = Scroll.Events;
 let scroll = Scroll.animateScroll;
 let scrollSpy = Scroll.scrollSpy;
 
+const resume =
+  "https://s3-us-west-2.amazonaws.com/assets.michaelburton.co/Michael+Burton+Res.pdf";
+
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
@@ -31,12 +34,7 @@ class NavBar extends React.Component {
 
   render() {
     return (
-      <Navbar
-        style={{ height: "5vh", width: '100vw', top: 0, left: 0 }}
-        className="white"
-        fixedTop
-        collapseOnSelect
-      >
+      <Navbar className="navbar" fixedTop collapseOnSelect>
         <Navbar.Header>
           <Navbar.Brand>
             <div id="headerLogo">
@@ -50,49 +48,41 @@ class NavBar extends React.Component {
         </Navbar.Header>
         <Navbar.Collapse id="navBarRightDesktop">
           <Nav pullRight>
-            <NavDropdown eventKey={1} title="Code" id="basic-nav-dropdown">
+            <NavDropdown title="Code" className="scrollLink">
               <Link
                 className="scrollLink"
-                style={{ display: "block", padding: "0.5em" }}
                 to="truckHunt"
                 spy
                 smooth
                 duration={500}
                 offset={-100}
               >
-                truckHunt
+                Truck Hunt
               </Link>
               <Link
                 className="scrollLink"
-                style={{ display: "block", padding: "0.5em" }}
                 to="wizardsChess"
                 spy
                 smooth
                 duration={500}
                 offset={-150}
               >
-                wizardsChess
+                Wizards Chess
               </Link>
               <Link
                 className="scrollLink"
-                style={{ display: "block", padding: "0.5em" }}
                 to="privateList"
                 spy
                 smooth
                 duration={500}
                 offset={-100}
               >
-                privateList
+                Private List
               </Link>
             </NavDropdown>
-            <NavDropdown
-              eventKey={1}
-              title="Photography"
-              id="basic-nav-dropdown"
-            >
+            <NavDropdown  className="scrollLink" title="Photography">
               <Link
                 className="scrollLink"
-                style={{ display: "block", padding: "0.5em" }}
                 to="weddings"
                 spy
                 smooth
@@ -100,10 +90,9 @@ class NavBar extends React.Component {
                 offset={-150}
               >
                 Weddings
-              </Link>
+              </Link><br />
               <Link
                 className="scrollLink"
-                style={{ display: "block", padding: "0.5em" }}
                 to="testimonials"
                 spy
                 smooth
@@ -113,28 +102,26 @@ class NavBar extends React.Component {
                 Testimonials
               </Link>
             </NavDropdown>
-            <NavItem eventKey={3}>
-              <Link
-                className="scrollLink"
-                to="music"
-                spy
-                smooth
-                duration={700}
-                offset={80}
-              >
+            <NavItem>
+              <Link className="scrollLink" to="music" spy smooth duration={700}>
                 Music
               </Link>
             </NavItem>
-            <NavItem eventKey={6}>
+            <NavItem>
               <Link className="scrollLink" to="about" spy smooth duration={900}>
                 About
               </Link>
+            </NavItem>
+            <NavItem>
+              <a href={resume} target="_blank" rel="noopener noreferrer" className="scrollLink">
+                Resume
+              </a>
             </NavItem>
           </Nav>
         </Navbar.Collapse>
         <Navbar.Collapse id="navBarRightMobile">
           <Nav pullRight>
-            <NavItem />
+            <NavItem>{/* TODO: ADD MOBILE MENU */}</NavItem>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
