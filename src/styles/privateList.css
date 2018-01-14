@@ -1,0 +1,54 @@
+@import "https://fonts.googleapis.com/css?family=Fjalla+One";
+
+.title {
+  /*margin: 0;*/
+  position: relative;
+  /*top: 50%;*/
+  /*left: 50%;*/
+  font-size: 10vw;
+  line-height: 1.5em;
+  font-family: Fjalla One, sans-serif;
+  font-weight: 400;
+  /*padding-top: 2em;*/
+  /*padding-bottom: -2em;*/
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  /*transform: translate3d(-50%, -50%, 0);*/
+}
+
+.title-svg {
+  display: block;
+}
+
+.title-alpha,
+.title-text {
+  transition: fill 0.3s cubic-bezier(0.895, 0.03, 0.685, 0.22),
+    x 0.3s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+
+.title-alpha {
+  fill: white;
+}
+
+.title:hover .title-alpha {
+  x: -100%;
+
+  fill: black;
+}
+
+.title-text {
+  font-size: 10vw;
+
+  fill: black;
+  text-anchor: middle;
+}
+
+.title:hover .title-text {
+  fill: white;
+}
+
+.title-bg {
+  fill: white;
+  mask: url(#title-mask);
+}

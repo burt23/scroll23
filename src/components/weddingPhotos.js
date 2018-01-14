@@ -5,7 +5,7 @@ const weddingPhotos = [
     height: 3
   },
   {
-    src: "https://s3-us-west-2.amazonaws.com/assets.michaelburton.co/IMG_6725.jpg",
+    src: "https://s3-us-west-2.amazonaws.com/assets.michaelburton.co/IMG_6811.jpg",
     width: 1,
     height: 1
   },
@@ -40,7 +40,7 @@ const weddingPhotos = [
     height: 3
   },
   {
-    src: "https://s3-us-west-2.amazonaws.com/assets.michaelburton.co/IMG_6811.jpg",
+    src: "https://s3-us-west-2.amazonaws.com/assets.michaelburton.co/IMG_6725.jpg",
     width: 4,
     height: 3
   },
