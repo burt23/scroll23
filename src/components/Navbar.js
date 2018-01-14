@@ -112,11 +112,11 @@ class NavBar extends React.Component {
                 About
               </Link>
             </NavItem>
-            <NavItem>
-              <a href={resume} target="_blank" rel="noopener noreferrer" className="scrollLink">
+            {/*<NavItem>
+              <a href="https://s3-us-west-2.amazonaws.com/assets.michaelburton.co/Michael+Burton+Res.pdf" target="_blank" rel="noopener noreferrer" className="scrollLink">
                 Resume
               </a>
-            </NavItem>
+            </NavItem>*/}
           </Nav>
         </Navbar.Collapse>
         <Navbar.Collapse id="navBarRightMobile">
