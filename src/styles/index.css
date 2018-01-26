@@ -280,29 +280,48 @@ ul.nav.navbar-nav.navbar-right {
 
 /*PROJECTS*/
 .truckHuntWrapper {
-  background: #304D6D;
+  background: #003459;
   /*color: #fffc31;*/
+   background: -webkit-linear-gradient(to bottom, #0b1d2a, #003459); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #0b1d2a, #003459); 
+
 }
 .wizardsChessWrapper {
   background: #1E2019;
+  background: -webkit-linear-gradient(to bottom, #003459, #1E2019); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #003459, #1E2019);
   /*color: #f0ebd8;*/
 }
 .privateListWrapper {
-  background: #304D6D;
+  background: #003459;
+    background: -webkit-linear-gradient(to bottom, #1E2019, #003459);  /*Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #1E2019, #003459);
 }
 .weddingsWrapper {
-  background: #1E2019;
+  /*background: #1E2019;
+   /*background: #1E2019;*/
+  background: -webkit-linear-gradient(to bottom, floralwhite, ivory); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, floralwhite, ivory);
+  color: #333;
 }
 .testimonialsWrapper {
-  background: #304D6D;
+  /*background: #304D6D;*/
+  background: white;
+  color: #333;
+   background: -webkit-linear-gradient(to bottom,  ivory, #0089EB);
+  background: linear-gradient(to bottom,  ivory, #0089EB);
 }
 .musicWrapper {
-  background: #1E2019;
+  /*background: #0089EB;
+   background: #1E2019;
+  background: -webkit-linear-gradient(to bottom, #0089EB, #003459); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #0089EB, #003459);
+  color: white;
 }
 .aboutWrapper {
   background: #003459;
-   background: -webkit-linear-gradient(to top, #1E2019, #0089EB); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #1E2019, #0089EB);
+   background: -webkit-linear-gradient(to top, #1E2019, #003459); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #1E2019, #003459);
 }
 .mobileEnerlyticsWrapper {
   background: rgba(0, 0, 0, 0.2);
