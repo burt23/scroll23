@@ -26,3 +26,11 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+#canvas {
+  display: block;
+  left: 50%;
+  margin: -125px 0 0 -125px;
+  position: absolute;
+  top: 50%;
+}

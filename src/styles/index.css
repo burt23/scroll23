@@ -25,7 +25,7 @@ a:hover{
 
 body {
   font-family: "Open Sans", sans-serif;
-  background: black;
+  /*background: white;*/
   color: white;
 }
 
@@ -101,6 +101,10 @@ svg {
   100% {
     opacity: 0;
   }
+}
+
+.navbar-default {
+  border: none !important;
 }
 
 @keyframes line {
@@ -215,6 +219,10 @@ body {
   -webkit-animation-delay: 0s; /* Safari 和 Chrome */
 }
 
+.typistHeader {
+  font-size: 3.6em;
+}
+
 @media screen {
 }
 
@@ -292,7 +300,9 @@ ul.nav.navbar-nav.navbar-right {
   background: #1E2019;
 }
 .aboutWrapper {
-  background: #304D6D;
+  background: #003459;
+   background: -webkit-linear-gradient(to top, #1E2019, #0089EB); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #1E2019, #0089EB);
 }
 .mobileEnerlyticsWrapper {
   background: rgba(0, 0, 0, 0.2);

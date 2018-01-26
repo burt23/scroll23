@@ -14,6 +14,9 @@ export default class extends React.PureComponent {
             <div id="welcomeLogo">
               <Logo />
             </div>
+            <span>
+              <h1 className="typistHeader">Full-Stack Developer</h1>
+            </span>
             <TypistHero />
           </div>
           <div>
