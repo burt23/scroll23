@@ -48,7 +48,15 @@ class NavBar extends React.Component {
         </Navbar.Header>
         <Navbar.Collapse id="navBarRightDesktop">
           <Nav pullRight>
-            <NavDropdown title="Code" className="scrollLink">
+            <NavDropdown title="Projects" className="scrollLink">
+              <Link
+                className="scrollLink"
+                to="mobileEnerlytics"
+                spy
+                smooth
+                duration={500}
+                offset={-100}
+              >
               <Link
                 className="scrollLink"
                 to="truckHunt"
@@ -69,18 +77,10 @@ class NavBar extends React.Component {
               >
                 Wizards Chess
               </Link>
-              <Link
-                className="scrollLink"
-                to="privateList"
-                spy
-                smooth
-                duration={500}
-                offset={-100}
-              >
                 Private List
               </Link>
             </NavDropdown>
-            <NavDropdown  className="scrollLink" title="Photography">
+            <NavItem>
               <Link
                 className="scrollLink"
                 to="weddings"
@@ -89,19 +89,9 @@ class NavBar extends React.Component {
                 duration={500}
                 offset={-150}
               >
-                Weddings
-              </Link><br />
-              <Link
-                className="scrollLink"
-                to="testimonials"
-                spy
-                smooth
-                duration={500}
-                offset={-100}
-              >
-                Testimonials
+                Photography 
               </Link>
-            </NavDropdown>
+            </NavItem>
             <NavItem>
               <Link className="scrollLink" to="music" spy smooth duration={700}>
                 Music

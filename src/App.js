@@ -129,7 +129,7 @@ class App extends React.Component {
   render() {
     if (!this.state.loading) {
       return (
-        <div>
+        <div id='appWrapper'>
           <Navbar />
           <Particles params={params} className="particles" />
           <WelcomePage />

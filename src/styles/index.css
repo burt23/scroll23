@@ -27,7 +27,7 @@ a:hover{
 body {
   font-family: "Open Sans", sans-serif;
   /*background: white;*/
-  color: white;
+  color: #263743;
 }
 
 span.Cursor.Cursor--blinking {
@@ -155,7 +155,7 @@ svg.bottom {
 }
 
 body {
-  background: #0b1d2a;
+  /*background: #0b1d2a;*/
 }
 
 .arrows {
@@ -274,59 +274,53 @@ ul.nav.navbar-nav.navbar-right {
   width: 100vw;
   /*z-index: -999;*/
 }
+.webProjectsWrapper {
+  color: #263743;
+}
 
+#appWrapper {
+   background: -webkit-linear-gradient(to bottom, rgba(51,135,195,0.3), rgba(51,135,195,1)); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, rgba(51,135,195,0.3), rgba(51,135,195,1)); 
+}
 .welcomeWrapper {
   height: 100vh;
+  /*border: 10px solid gold;*/
   display: block;
+  /*color: #fffc31;*/
+  /*background: #0b1d2a;*/
+  /*background: linear-gradient(to bottom, #0b1d2a, rgba(51,135,195,0.1));  background: #0b1d2a;*/
+   /*background: -webkit-linear-gradient(to bottom, #0b1d2a, rgba(51,135,195,0.1)); /* Chrome 10-25, Safari 5.1-6 */
+}
+
+.mobileEnerltyicsWrapper {
+  /*border: 10px solid gold;*/
+  /*background: #0b1d2a;*/
+   /*background: -webkit-linear-gradient(to bottom, rgba(51,135,195,0.1), rgba(51,135,195,0.2)); /* Chrome 10-25, Safari 5.1-6 */
+  /*background: linear-gradient(to bottom, rgba(51,135,195,0.1), rgba(51,135,195,0.2)); */
 }
 
 /*PROJECTS*/
 .truckHuntWrapper {
-  background: #003459;
+  /*background: #003459;*/
   /*color: #fffc31;*/
-   background: -webkit-linear-gradient(to bottom, #0b1d2a, #003459); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #0b1d2a, #003459); 
+   /*background: -webkit-linear-gradient(to bottom, rgba(51,135,195,0.2), rgba(51,135,195,0.3)); /* Chrome 10-25, Safari 5.1-6 */
+  /*background: linear-gradient(to bottom, rgba(51,135,195,0.2), rgba(51,135,195,0.3));   */
 
 }
 .wizardsChessWrapper {
-  background: #1E2019;
-  background: -webkit-linear-gradient(to bottom, #003459, #1E2019); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #003459, #1E2019);
-  /*color: #f0ebd8;*/
 }
 .privateListWrapper {
-  background: #003459;
-    background: -webkit-linear-gradient(to bottom, #1E2019, #003459);  /*Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #1E2019, #003459);
 }
 .weddingsWrapper {
-  /*background: #1E2019;
-   /*background: #1E2019;*/
-  background: -webkit-linear-gradient(to bottom, floralwhite, ivory); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, floralwhite, ivory);
-  color: #333;
+  /*color: #333;*/
 }
 .testimonialsWrapper {
-  /*background: #304D6D;*/
-  background: white;
-  color: #333;
-   background: -webkit-linear-gradient(to bottom,  ivory, #0089EB);
-  background: linear-gradient(to bottom,  ivory, #0089EB);
 }
 .musicWrapper {
-  /*background: #0089EB;
-   background: #1E2019;
-  background: -webkit-linear-gradient(to bottom, #0089EB, #003459); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #0089EB, #003459);
-  color: white;
 }
 .aboutWrapper {
-  background: #003459;
-   background: -webkit-linear-gradient(to top, #1E2019, #003459); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #1E2019, #003459);
 }
 .mobileEnerlyticsWrapper {
-  background: rgba(0, 0, 0, 0.2);
 }
 
 
@@ -340,6 +334,12 @@ ul.nav.navbar-nav.navbar-right {
   padding: 1em 0;
 }
 
+.projectBannerImage > img{
+  position: relative;
+  /*width: 1000px !important;*/
+  height: 50vh;
+  /*border: 10px solid gold;*/
+}
 /*MUSIC*/
 .bandcampStyles {
   border: 1px solid black;
@@ -354,13 +354,14 @@ ul.nav.navbar-nav.navbar-right {
   width: 100vw;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
+  /*background: rgba(0, 0, 0, 0);*/
+  background: #eaf3f8;
+  /*color: #263743;*/
 }
 .scrollLink {
   display: block;
   padding: 0 0.5em;
-  color: white;
+  color: #263743;
   /*text-decoration: none;*/
   /*outline: none;*/
 }
@@ -381,7 +382,7 @@ ul.dropdown-menu {
 }
 
 a.dropdown-toggle {
-    color: white !important;
+    color: #263743 !important;
 }
 
 a.dropdown-toggle:hover {
@@ -424,8 +425,8 @@ a.dropdown-toggle:hover {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  padding: 2em;
-  background: #1E2019;
+  padding: 4em;
+  /*margin: 2em 1em;*/
 }
 
 .footerItem {
@@ -563,4 +564,9 @@ ul {
 .svg-wrapper:hover .shape {
   -webkit-animation: 0.5s draw linear forwards;
   animation: 0.5s draw linear forwards;
+}
+
+.projectHeader {
+  font-size: 4em;
+  padding: 2em;
 }
