@@ -12,6 +12,7 @@ export default class Projects extends React.PureComponent {
   render() {
     return (
       <div className="webProjectsWrapper">
+        {/* ------------------MOBILE ENERLYTICS------------------ */}
         <Element name="mobileEnerlyics" className="mobileEnerltyicsWrapper">
           <div className="appWrapper">
             <WebProject
@@ -22,15 +23,6 @@ export default class Projects extends React.PureComponent {
         {/* ------------------TRUCK HUNT------------------ */}
         <Element name="truckHunt" className="truckHuntWrapper">
           <div className="appWrapper">
-            <TruckHuntSVG />
-            <iframe
-              title="truckHuntVideo"
-              className="iframeStyles"
-              src="https://www.youtube.com/embed/iVUxqjB9uu4"
-              frameBorder="0"
-              gesture="media"
-              allowFullScreen
-            />
             <WebProject
               project={appText.truckHunt}
             />
@@ -39,15 +31,11 @@ export default class Projects extends React.PureComponent {
         {/* ------------------WIZARDS CHESS------------------ */}
         <Element name="wizardsChess" className="wizardsChessWrapper">
           <div className="appWrapper">
-            <a href="https://wizardschess.club">
-              <WizardsChessSVG />
-            </a>
             <WebProject
               project={appText.wizardsChess}
             />
           </div>
         </Element>
-        {/* ------------------PRIVATE LIST------------------ */}
       </div>
     );
   }

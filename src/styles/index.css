@@ -27,7 +27,8 @@ a:hover{
 body {
   font-family: "Open Sans", sans-serif;
   /*background: white;*/
-  color: #263743;
+  /*color: #263743;*/
+  color: ivory;
 }
 
 span.Cursor.Cursor--blinking {
@@ -275,7 +276,7 @@ ul.nav.navbar-nav.navbar-right {
   /*z-index: -999;*/
 }
 .webProjectsWrapper {
-  color: #263743;
+  /*color: #263743;*/
 }
 
 #appWrapper {
@@ -337,8 +338,10 @@ ul.nav.navbar-nav.navbar-right {
 .projectBannerImage > img{
   position: relative;
   /*width: 1000px !important;*/
-  height: 50vh;
+  /*height: 50vh;*/
   /*border: 10px solid gold;*/
+  max-width: 50vw;
+  padding: 2em 1em 1em 1em;
 }
 /*MUSIC*/
 .bandcampStyles {
@@ -355,13 +358,13 @@ ul.nav.navbar-nav.navbar-right {
   top: 0;
   left: 0;
   /*background: rgba(0, 0, 0, 0);*/
-  background: #eaf3f8;
+  background: rgb(194, 219, 237);
   /*color: #263743;*/
 }
 .scrollLink {
   display: block;
   padding: 0 0.5em;
-  color: #263743;
+  color: white;
   /*text-decoration: none;*/
   /*outline: none;*/
 }
@@ -372,21 +375,24 @@ ul.nav.navbar-nav.navbar-right {
   color: #458bca;
 }
 ul.dropdown-menu {
-    background: #304D6D;
+    background: rgb(194, 219, 237);
     text-align: center;
+    border: 0.5px solid rgb(194, 219, 237);
 }
 
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
     /*color: #555;*/
-    background-color: #304D6D;
+    background: rgba(26, 246, 232, 0.5);
 }
 
 a.dropdown-toggle {
-    color: #263743 !important;
+    color: white !important;
+
 }
 
 a.dropdown-toggle:hover {
     color: #458bca !important;
+
 }
 
 /*CONTENT*/
@@ -567,6 +573,29 @@ ul {
 }
 
 .projectHeader {
-  font-size: 4em;
-  padding: 2em;
+  font-size: 2em;
+  /*padding: 2em;*/
+}
+
+.proFlex {
+  display: flex;
+  flex-direction: row;
+  /*border: 5px solid orange;*/
+}
+
+.proText {
+  flex: 1 1 auto;
+}
+
+.proImg {
+  flex: 0 1 auto;
+}
+
+.proCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.proColItem {
+  flex: 1 1 auto;
 }
