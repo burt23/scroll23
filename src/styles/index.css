@@ -285,43 +285,7 @@ ul.nav.navbar-nav.navbar-right {
 }
 .welcomeWrapper {
   height: 100vh;
-  /*border: 10px solid gold;*/
   display: block;
-  /*color: #fffc31;*/
-  /*background: #0b1d2a;*/
-  /*background: linear-gradient(to bottom, #0b1d2a, rgba(51,135,195,0.1));  background: #0b1d2a;*/
-   /*background: -webkit-linear-gradient(to bottom, #0b1d2a, rgba(51,135,195,0.1)); /* Chrome 10-25, Safari 5.1-6 */
-}
-
-.mobileEnerltyicsWrapper {
-  /*border: 10px solid gold;*/
-  /*background: #0b1d2a;*/
-   /*background: -webkit-linear-gradient(to bottom, rgba(51,135,195,0.1), rgba(51,135,195,0.2)); /* Chrome 10-25, Safari 5.1-6 */
-  /*background: linear-gradient(to bottom, rgba(51,135,195,0.1), rgba(51,135,195,0.2)); */
-}
-
-/*PROJECTS*/
-.truckHuntWrapper {
-  /*background: #003459;*/
-  /*color: #fffc31;*/
-   /*background: -webkit-linear-gradient(to bottom, rgba(51,135,195,0.2), rgba(51,135,195,0.3)); /* Chrome 10-25, Safari 5.1-6 */
-  /*background: linear-gradient(to bottom, rgba(51,135,195,0.2), rgba(51,135,195,0.3));   */
-
-}
-.wizardsChessWrapper {
-}
-.privateListWrapper {
-}
-.weddingsWrapper {
-  /*color: #333;*/
-}
-.testimonialsWrapper {
-}
-.musicWrapper {
-}
-.aboutWrapper {
-}
-.mobileEnerlyticsWrapper {
 }
 
 
@@ -329,6 +293,8 @@ ul.nav.navbar-nav.navbar-right {
   height: 40vh;
   width: 100%;
 }
+
+
 
 .projectHeader {
   text-align: center;
@@ -340,7 +306,7 @@ ul.nav.navbar-nav.navbar-right {
   /*width: 1000px !important;*/
   /*height: 50vh;*/
   /*border: 10px solid gold;*/
-  max-width: 50vw;
+  max-width: 100%;
   padding: 2em 1em 1em 1em;
 }
 /*MUSIC*/
@@ -573,22 +539,44 @@ ul {
 }
 
 .projectHeader {
-  font-size: 2em;
+  /*font-size: 2em;*/
   /*padding: 2em;*/
+}
+.projectTagline{
+  /*color: #19f6e8;*/
 }
 
 .proFlex {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   /*border: 5px solid orange;*/
 }
 
 .proText {
   flex: 1 1 auto;
+  /*border: 1px solid green;*/
+  max-width: 50%;
 }
 
+
+/*.proImg:nth-of-type(2n+1) {
+  order:-11;
+  border: 100px solid gold;
+}*/
+
 .proImg {
-  flex: 0 1 auto;
+  max-width: 50%;
+  flex: 1 1 auto;
+  /*border: 1px solid pink;*/
+  /*order: -9;*/
+}
+.proOdd:nth-child(2) {
+  order: -99;
+}
+.proFlex:nth-child(odd) {
+  /*border: 10px solid gold;*/
+  /*order:-1;*/
 }
 
 .proCol {
@@ -598,4 +586,47 @@ ul {
 
 .proColItem {
   flex: 1 1 auto;
+}
+
+.photographyWrapper {
+  display: flex;
+  flex-direction: row;
+}
+.photographyWrapper > div>h3 {
+  text-align: center;
+  padding: 1em;
+}  
+
+.PWFineArt {
+  background: rgba(0,0,0,0.9);
+  flex: 1;
+}
+.PWWeddings {
+  background: rgba(255,255,255,0.9);
+  flex: 1;
+  color: black;
+}
+
+.PWFlexrow {
+  border: 10px solid gold;
+  display: flex;
+  flex-direction: row;
+  min-height: 30vh;
+}
+.PWFlexitem {
+  flex: auto;
+  height: 100%; 
+}
+
+.PWFlexitem > img {
+    width: 100%;
+}
+
+.PWFlexitem > img {
+    width: 100%;
+}
+
+.PWTestimonials {
+  overflow: scroll;
+  max-height: 300px;
 }

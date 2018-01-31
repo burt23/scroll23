@@ -39,8 +39,8 @@ export default class App extends React.Component {
   }
   render() {
     return (
-      <div>
-        <Gallery photos={weddingPhotos} onClick={this.openLightbox} />
+      <div className='PWFlexitem'>
+        <img src='http://dogecoin.com/imgs/doge.png' alt='dogecoin' />
         <Lightbox
           images={weddingPhotos}
           onClose={this.closeLightbox}

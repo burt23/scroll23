@@ -5,8 +5,7 @@ import Scroll from "react-scroll";
 import params from "./components/particleParams.js";
 import WelcomePage from "./containers/WelcomePage";
 import Projects from "./containers/Projects";
-import Weddings from "./containers/Weddings";
-import Testimonials from "./containers/Testimonials";
+import Photography from "./containers/Photography";
 import Music from "./containers/Music";
 import About from "./containers/About";
 import Footer from "./containers/Footer";
@@ -134,8 +133,7 @@ class App extends React.Component {
           <Particles params={params} className="particles" />
           <WelcomePage />
           <Projects />
-          <Weddings />
-          <Testimonials />
+          <Photography />
           <Music />
           <About />
           <Footer />
