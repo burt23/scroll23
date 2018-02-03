@@ -1,3 +1,24 @@
+var react = require("../icons/react.png");
+var node = require("../icons/node.png");
+var mapbox = require("../icons/mapbox.png");
+var postgres = require("../icons/postgres.png");
+var bootstrap = require("../icons/bootstrap.jpg");
+var css3 = require("../icons/css3.png");
+var expressjs = require("../icons/express.png");
+var html = require("../icons/html.png");
+var mapbox = require("../icons/mapbox.png");
+var material = require("../icons/material.jpg");
+var mic = require("../icons/mic.png");
+var mysql = require("../icons/mysql.png");
+var nginx = require("../icons/nginx.png");
+var reactRouter = require("../icons/react-router.png");
+var redux = require("../icons/redux.png");
+var semantic = require("../icons/semantic.png");
+var socket = require("../icons/socket.png");
+var xd = require("../icons/xd.jpg");
+var wizscreenshot = require("../pics/wizscreenshot.png");
+var mobilescreenshot = require("../pics/mobilescreenshot.png");
+
 module.exports = {
   about:
     "Born in San Francisco in the late 80's, I've had a chance to see the technology in a unique light a the .com boom transformed my hometown into the technology hub of the world. During college, I studied economics during the worst downturn in modern history since the great depression, which afforded me insights into the struggles of the global economy and the possible vectors for survival. Returning to the tech roots that have always been around me I got back into coding fulltime in mid-2016, selling off my photography business and attending Hack Reactor. My current interests in tech revolve around creating more fair and just democratic systems, social justice and equality, cybersecurity and protecting our online identities, increasing energy efficiencies and reducing waste, more efficient modes of transportation, providing healthy food for our growing population, and space colonization.",
@@ -10,6 +31,7 @@ module.exports = {
   truckHunt: {
     header: "Truck Hunt",
     tagline: "Order online from your favorite food trucks in SF",
+    display: "right",
     github: "https://github.com/truck-hunters/TruckHunt",
     description:
       "Browse nearby food trucks in San Francisco, and order food ahead of time so that it's ready for pickup when you arrive. Vendors receive notifications when new orders are placed and manage payments and orders through the vendor portal.",
@@ -21,10 +43,46 @@ module.exports = {
         "http://dhmyyrxmn8ugc.cloudfront.net/portfolio/truckHunt/Trunk-Hunt-HQ.gif"
     },
     techStack: {
-      github: "https://github.com",
-      google: "https://google.com",
-      amazon: "https://amazon.com",
-      microsoft: "https://microsoft.com"
+      mapbox: {
+        src: mapbox,
+        width: 70,
+        title: "Mapbox"
+      },
+      node: {
+        src: node,
+        width: 70,
+        title: "Node.js"
+      },
+      express: {
+        src: expressjs,
+        width: 70,
+        title: "Express.js"
+      },
+      postgres: {
+        src: postgres,
+        width: 70,
+        title: "PostgreSQL"
+      },
+      react: {
+        src: react,
+        width: 70,
+        title: "React.js"
+      },
+      redux: {
+        src: redux,
+        width: 70,
+        title: "Redux.js"
+      },
+      reactRouter: {
+        src: reactRouter,
+        width: 70,
+        title: "React-Router"
+      },
+      semantic: {
+        src: semantic,
+        width: 70,
+        title: "Semantic UI"
+      }
     }
   },
 
@@ -35,19 +93,14 @@ module.exports = {
     description:
       "Allows users to securely store lists and easily share them with friends via email or through secure access tokens. Designed for secure and anonymous communication of secure encrypted messages.",
     accomplishments:
-      "This project highlights my passion for security and belief in the need for private messaging. Utilizing a React frontend with a Node/Express backend connected to a MySQL database, this application aims at following best practices in web security, while still providing users with a clean and intuitive UI/UX.",
+      "This project highlights my passion for security and belief in the need for private messaging. Utilizing a React frontend with a Node/Express backend connected to a MySQL database, this application aims at following best practices in web security, while still providing users with a clean and intuitive UI/UX."
     // accomplishments: 'Personal project built in React with a Node/Express backend leveraging the Node Crypto library to hash and salt passwords, and to encrypt messages at rest in the SQL database.',
-    techStack: {
-      github: "https://github.com",
-      google: "https://google.com",
-      amazon: "https://amazon.com",
-      microsoft: "https://microsoft.com"
-    }
   },
 
   wizardsChess: {
     header: "Wizards Chess",
     tagline: "Voice Controlled Online Chess",
+    display: "left",
     description:
       'Inspired by the book Harry Potter, this web application allows players to control the board via voice commands (i.e. "Queen to E9"). This is made possible by utilizing Google Chromes implementation of the Javascript Speech Recognition API.',
     accomplishments:
@@ -55,33 +108,94 @@ module.exports = {
     github: "https://github.com/twalk4821/wizardsChessAPI",
     img: {
       alt: "Wizards Chess Screenshot",
-      src:
-        "https://s3-us-west-2.amazonaws.com/assets.michaelburton.co/Screen+Shot+2018-01-29+at+2.44.28+PM+(1).png"
+      src: wizscreenshot
     },
     techStack: {
-      github: "https://github.com",
-      google: "https://google.com",
-      amazon: "https://amazon.com",
-      microsoft: "https://microsoft.com"
+      nginx: {
+        src: nginx,
+        width: 70,
+        title: "NGiNX"
+      },
+      node: {
+        src: node,
+        width: 70,
+        title: "Node.js"
+      },
+      material: {
+        src: material,
+        width: 70,
+        title: "Material-UI"
+      },
+      react: {
+        src: react,
+        width: 70,
+        title: "React.js"
+      },
+      express: {
+        src: expressjs,
+        width: 70,
+        title: "Express.js"
+      },
+      reactRouter: {
+        src: reactRouter,
+        width: 70,
+        title: "React-router"
+      },
+      redux: {
+        src: redux,
+        width: 70,
+        title: "Redux.js"
+      },
+      mic: {
+        src: mic,
+        width: 70,
+        title: "Google Chrome Speech API"
+      }
     }
   },
   mobileEnerlytics: {
     header: "Mobile Enerlytics",
     tagline: "Leader in Automated Testing for Reducing Battery Drain",
+    display: "left",
     description:
       "Leveraging nearly a decade’s worth of research into smart phone energy management, Mobile Enerlytics is a leader in mobile application testing solutions that lead to better app performance, user experience, and potentially billions of dollars in additional captured revenue. Today, the company works with some of the world’s leading app marketers, enhancing the performance of their apps through more efficient management of energy consumption.",
     accomplishments:
       "Lead Frontend Developer on Greenfield project of an admin dashboard for enterprise B2B customers. Worked on creating user stories, and iteratively designed wireframes prior to coding. Made heavy use of Redux, Chart.js, React-Router, Material-UI, and SCSS.",
     img: {
       alt: "Mobile Enerlytics Screenshot",
-      src:
-        "https://s3-us-west-2.amazonaws.com/assets.michaelburton.co/Screen+Shot+2018-01-29+at+2.40.57+PM.png"
+      src: mobilescreenshot
     },
     techStack: {
-      github: "https://github.com",
-      google: "https://google.com",
-      amazon: "https://amazon.com",
-      microsoft: "https://microsoft.com"
+      redux: {
+        src: redux,
+        width: 70,
+        title: "Redux.js"
+      },
+      reactRouter: {
+        src: reactRouter,
+        width: 70,
+        title: "React-Router"
+      },
+      xd: {
+        src: xd,
+        width: 70,
+        title: "Adobe XD"
+      },
+      material: {
+        src: material,
+        width: 70,
+        title: "Material-UI"
+      },
+      html: {
+        src: html,
+        width: 70,
+        title: "HTML 5"
+      },
+      css3: {
+        src: css3,
+        width: 70,
+        title: "CSS 3"
+      }
     }
   },
   photography: {

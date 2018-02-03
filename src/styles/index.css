@@ -553,6 +553,10 @@ ul {
   /*border: 5px solid orange;*/
 }
 
+.proFlexRight {
+  flex-direction: row-reverse;
+}
+
 .proText {
   flex: 1 1 auto;
   /*border: 1px solid green;*/
@@ -629,4 +633,34 @@ ul {
 .PWTestimonials {
   overflow: scroll;
   max-height: 300px;
+}
+
+.techstackFlexbox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /*border: 1px solid gold;*/
+  justify-content: space-evenly;
+}
+
+.techstackFlexitem {
+  /*border: 1px solid green;*/
+  flex: 0 1 auto;
+  padding: 0.5em;
+}
+
+.projectGithub > svg{
+  height: 50px;
+  fill: white;
+  /*display: block;*/
+}
+
+.techstackHeader {
+  color: white;
+  font-size: 2em;
+  padding: 1em;
+}
+
+.projectDivider {
+  border-color: black;
 }
