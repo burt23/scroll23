@@ -722,7 +722,6 @@ ul {
 
 .PWWrapper {
   background: #3AE8E6;
-  filter: opacity(95%);
   color: #FCFCFC;
   flex: 1;
   padding: 1em;
@@ -772,11 +771,6 @@ ul {
 .PWFlexitem > p {
   text-align: justify; }
 
-.PWTestimonials {
-  overflow: scroll;
-  max-height: 300px;
-  max-width: 100%; }
-
 .techstackFlexbox {
   display: flex;
   flex-direction: row;
@@ -786,6 +780,12 @@ ul {
 .techstackFlexitem {
   flex: 0 1 auto;
   padding: 0.5em; }
+
+.webProjectsHeader {
+  text-align: center;
+  padding: 2em;
+  /*text-decoration: underline;*/
+  color: #17579B; }
 
 .projectGithub > svg {
   height: 50px;
@@ -797,4 +797,4 @@ ul {
   padding: 1em; }
 
 .projectDivider {
-  border-color: #4CD2FF; }
+  border-color: #238FB2; }

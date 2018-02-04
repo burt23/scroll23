@@ -6,7 +6,7 @@ import colorPhotos from "../components/colorPhotos";
 import bwPhotos from "../components/bwPhotos";
 import weddingPhotos from "../components/weddingPhotos";
 import portraitPhotos from "../components/portraitPhotos";
-import Testimonials from "./Testimonials";
+// import Testimonials from "./Testimonials";
 let Element = Scroll.Element;
 
 export default class Photography extends React.PureComponent {

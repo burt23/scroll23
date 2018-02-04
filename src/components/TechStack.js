@@ -7,12 +7,13 @@ const TechStack = props => {
   return(
     <div>
       <h4 className='techstackHeader'> Tech Stack </h4>
-      <div key={props} className="techstackFlexbox">
+      <div  className="techstackFlexbox">
         {_.map(props.techStack, (tech, id) => {
           let src = tech.src;
 
           return (
               <img
+                key={src}
                 className="techstackFlexitem"
                 src={src}
                 alt="alt"
@@ -29,8 +30,3 @@ const TechStack = props => {
 };
 
 export default TechStack;
-    // console.log("tech.src", tech.src);
-    // console.log("id", id);
-    // console.log("src", src[id]);
-    // console.log("src", typeof(src));
-    // console.log("width", tech.width);

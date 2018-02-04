@@ -45,7 +45,7 @@ class NavBar extends React.Component {
         </Navbar.Header>
         <Navbar.Collapse id="navBarRightDesktop">
           <Nav pullRight>
-            <NavDropdown title="Projects">
+            <NavDropdown id="projectsDropdownMenu" title="Projects">
               <Link
                 className="scrollLink"
                 to="mobileEnerlytics"

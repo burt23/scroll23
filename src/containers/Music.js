@@ -17,6 +17,7 @@ export default class Music extends React.PureComponent {
             </div>
           </div>
           <div>
+            <img src={albumArt} alt="Mottainai Album Art" />
             <iframe
               title="Mottainai"
               className="bandcampStyles"

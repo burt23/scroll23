@@ -8,31 +8,29 @@ let Element = Scroll.Element;
 export default class Projects extends React.PureComponent {
   render() {
     return (
-      <div className="webProjectsWrapper">
-        {/* ------------------MOBILE ENERLYTICS------------------ */}
-        <Element name="mobileEnerlyics" className="mobileEnerltyicsWrapper">
-          <div className="appWrapper">
-            <WebProject
-              project={appText.mobileEnerlytics}
-            />
-          </div>
-        </Element>
-        {/* ------------------TRUCK HUNT------------------ */}
-        <Element name="truckHunt" className="truckHuntWrapper">
-          <div className="appWrapper">
-            <WebProject
-              project={appText.truckHunt}
-            />
-          </div>
-        </Element>
-        {/* ------------------WIZARDS CHESS------------------ */}
-        <Element name="wizardsChess" className="wizardsChessWrapper">
-          <div className="appWrapper">
-            <WebProject
-              project={appText.wizardsChess}
-            />
-          </div>
-        </Element>
+      <div>
+          <hr className="projectDivider" />
+        <div className="webProjectsWrapper">
+        <h1 className="webProjectsHeader">Web Projects</h1>
+          {/* ------------------MOBILE ENERLYTICS------------------ */}
+          <Element name="mobileEnerlyics" className="mobileEnerltyicsWrapper">
+            <div className="appWrapper">
+              <WebProject project={appText.mobileEnerlytics} />
+            </div>
+          </Element>
+          {/* ------------------TRUCK HUNT------------------ */}
+          <Element name="truckHunt" className="truckHuntWrapper">
+            <div className="appWrapper">
+              <WebProject project={appText.truckHunt} />
+            </div>
+          </Element>
+          {/* ------------------WIZARDS CHESS------------------ */}
+          <Element name="wizardsChess" className="wizardsChessWrapper">
+            <div className="appWrapper">
+              <WebProject project={appText.wizardsChess} />
+            </div>
+          </Element>
+        </div>
       </div>
     );
   }
