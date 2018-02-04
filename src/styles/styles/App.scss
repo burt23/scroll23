@@ -1,0 +1,365 @@
+@import "_theme";
+@import "_overview";
+
+.App {
+  text-align: center;
+  /*border: 10px solid gold;*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: $color-first;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+/*--------- START Dashboard Grid ----------- */
+
+.master {
+  grid-area: a;
+}
+.recentActivity {
+  grid-area: d;
+}
+.latestRelease {
+  grid-area: b;
+}
+.tests {
+  grid-area: c;
+}
+.component {
+  grid-area: e;
+}
+.thread {
+  grid-area: f;
+}
+.appbar {
+  grid-area: h;
+}
+.sidebar {
+  grid-area: s;
+}
+
+.grid {
+  display: inline-grid;
+  position: absolute;
+  top: 8vh;
+  left: 21vw;
+  /*border: 10px solid gold;*/
+  width: 78vw;
+  height: 91vh;
+  z-index: 1;
+  float: left;
+  grid-template-columns: 1fr 1fr 1fr;
+  /*grid-template-rows: 0.1fr 0.9fr minmax(0.5fr, 1fr) minmax(1fr, 1.5fr);*/
+  /*grid-template-rows: 10px 1fr minmax(0.5fr, 1fr) minmax(1fr, 1.5fr);*/
+  grid-template-rows: 1fr 1fr 1fr;
+  overflow: hidden;
+  grid-gap: 1vh;
+  grid-template-areas:
+    "a b c"
+    "d d e"
+    "d d f";
+}
+
+.grid-open {
+  @extend .grid;
+  left: 1vw !important;
+  width: 98vw;
+  transition: 0.2 ease;
+}
+
+.grid-item {
+  display: grid;
+  z-index: 9999;
+  overflow: auto;
+  background: $color-grey-lightest;
+  border: 1px solid $color-grey-darker;
+  /*height: 100%;*/
+  color: $color-forth;
+}
+
+.navBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20vw;
+  float: left;
+  height: 100vh;
+  /*margin-top: -8vh;*/
+  /*display: block;*/
+}
+
+#appbar {
+  width: 100vw;
+  left: 0;
+}
+@media screen and (min-width: 700px) and (max-width: 980px) {
+  .navlinkSpan {
+    font-size: 0.8em;
+  }
+  .navSpanFlex {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    padding: 0;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 699px) {
+  .grid-item {
+    font-size: 0.8em;
+  }
+  .grid-open {
+    /*border: 10px solid gold;*/
+  }
+
+  .navlinkSpan {
+    display: none;
+  }
+
+  .App {
+    /*overflow: scroll;*/
+  }
+  .overviewPercentChangeFlex {
+    display: flex;
+    flex-direction: row;
+    padding: 0.5em;
+    flex-wrap: wrap;
+  }
+}
+
+/*--------- END Dashboard Grid ----------- */
+
+/*--------- START Navbar Styles ----------- */
+#navbarWrapper {
+  background: $color-forth;
+  height: 100vh;
+}
+.navbar-username {
+  color: $color-first;
+}
+
+.navbar-user-id {
+  color: $color-third;
+}
+
+.appLogo {
+  max-width: 20vw;
+}
+
+.navbarLinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: auto;
+  padding: 2em 0 0 0;
+  list-style: none;
+}
+
+.navbarLink {
+  align-self: space-around;
+  flex: auto;
+}
+
+.flexAuto {
+  flex: auto;
+}
+
+.naviconStyle {
+  color: $color-grey-lightest;
+  padding-right: 1em;
+  margin: -7px;
+}
+
+.iconStyles {
+  color: $color-grey-lightest;
+}
+
+.navSpanFlex {
+  display: flex;
+  flex-direction: row;
+  width: 20vw;
+  padding: 0;
+  margin: 0;
+}
+
+.spanFlexItem {
+  flex: 0 1 auto;
+  color: #eee;
+}
+
+/*--------- END Navbar Styles ----------- */
+/*--------- START Appbar Styles ----------- */
+.grid-item > svg {
+  fill: #f7f7f7 !important;
+}
+
+.appbarOpen {
+  /*width: 80vw;*/
+  /*margin: 0;*/
+  /*background: #458bca;*/
+  /*grid-area: h;*/
+  /*top: 0;*/
+  /*left: 10vw;*/
+}
+
+.appbarClosed {
+  /*height: 7vh;*/
+  /*background: #458bca;*/
+  /*grid-area: h;*/
+  /*width: 100vw;*/
+}
+/*--------- END Appbar Styles ----------- */
+
+/*--------- START Wrapper Styles ----------- */
+/* These wrappers are a bit redundant but they are used to 
+   change the layout of the page based on whether or not 
+   the user opens or closes the side navigation panel. By
+   default the navigation bar is open, hence the naming
+   convention below */
+
+.openWrapper {
+  background: $color-grey-lightest;
+  position: absolute;
+  height: 93vh;
+  width: 80vw;
+  left: 20vw;
+  top: 7vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.closedWrapper {
+  @extend .openWrapper;
+  width: 100vw;
+  left: 0vw;
+}
+
+.topbarWrapperOpen {
+  position: relative;
+  top: 0;
+  left: 0;
+  /*height: 7vh;*/
+  width: 80vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $color-grey-lighter;
+  flex-wrap: wrap;
+}
+
+.topbarWrapperClosed {
+  @extend .topbarWrapperOpen;
+  width: 100vw;
+}
+
+.topbarItem {
+  flex: 0 1 auto;
+}
+/*--------- END Wrapper Styles ----------- */
+
+.appbarOpen {
+  width: 80vw;
+  /*margin: 0;*/
+  /*position*/
+  /*//background: this.props.muiTheme.palette.textColor;*/
+  /*//color: #f7f7f7;*/
+  top: 0;
+  /*left: "10vw";*/
+}
+
+.appbarClosed {
+  @extend .appbarOpen;
+  width: 100vw;
+  left: 0vw;
+}
+
+.testSelectorStyle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.branchSelectorStyle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/*--------- START Chart Styles ----------- */
+.chartColWrapper {
+  /*width: 80vw;*/
+  /*height: 80vh;*/
+  /*position: relative;*/
+  /*padding: 1em;*/
+  flex: 1 1 auto;
+}
+
+.topbarColWrapper {
+  flex: auto;
+}
+/*--------- END Chart Styles ----------- */
+
+.docsLink {
+  color: $color-grey-lightest;
+}
+
+.popoverMenu {
+  z-index: 999;
+}
+
+.settingsTableStyle {
+  margin: 0 auto;
+  width: 70%;
+  /*border: 10px solid gold;*/
+  border-radius: 5px;
+  padding: 1em;
+  background: $color-grey-lighter;
+}
+
+.settingsField {
+  font-size: 1.2em;
+  font-weight: 700;
+  padding: 1em;
+}
+
+tr > td {
+  padding: 1vh;
+}
+.unsubscribeMessage {
+  color: $color-second;
+}
+
+.settingsStyle {
+  height: 91vh;
+  width: 79vw;
+  margin: 1vh 0.5vw;
+  text-align: center;
+  background: #f7f7f7;
+}
+.settingsHeader {
+  color: #192b33;
+  padding: 1em;
+}

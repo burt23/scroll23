@@ -1,7 +1,4 @@
 import React from "react";
-import PrivateListSVG from "../assets/svg/PrivateListSVG";
-import TruckHuntSVG from "../assets/svg/TruckHuntSVG";
-import WizardsChessSVG from "../assets/svg/WizardsChessSVG";
 import Scroll from "react-scroll";
 import WebProject from "../components/WebProject";
 import appText from "../assets/text/appText";

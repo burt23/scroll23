@@ -9,7 +9,6 @@ import Photography from "./containers/Photography";
 import Music from "./containers/Music";
 import About from "./containers/About";
 import Footer from "./containers/Footer";
-import Loader from "./components/Loader";
 
 let Events = Scroll.Events;
 let scroll = Scroll.animateScroll;

@@ -1,0 +1,99 @@
+@import "_theme-colors";
+.recent_activity_panel {
+  justify-content: flex-start !important;
+  overflow: auto !important;
+  /*border: 10px solid green; */
+}
+
+.recent_activity_item {
+  flex: auto;
+  width: 95%;
+  margin-bottom: 1%;
+  border-radius: 5px;
+  background: $color-grey-lighter;
+  border: 0.5px solid $color-grey;
+  /*padding: 0.5em;*/
+}
+
+.recent_activity_item:hover {
+  background: $color-grey;
+}
+
+.recent_activity_flex_row {
+  display: flex;
+  flex-direction: row;
+  /*border: 10px solid green;*/
+  /*justify-content: center;*/
+  padding: 0 0.5em;
+  align-items: center;
+}
+
+.recent_activity_flex_row_content {
+  flex: auto;
+  color: $color-first;
+}
+
+.recent_activity_title {
+  flex: 1 1 auto;
+  /*font-size: 2em;*/
+}
+
+.recent_activity_totals {
+  flex: 0 1 auto;
+  /*align-self: flex-start;*/
+  /*border: 10px solid gold;*/
+}
+
+.recent_activity_flex_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*border: 10px solid black;*/
+}
+.recent_activity_item > span {
+  padding: 0.5em;
+
+}
+.pending_style {
+  color: $color-second;
+  flex: 1 1 auto;
+  flex-grow: 1;
+}
+
+.complete_style {
+  @extend .pending_style;
+  color: $color-first;
+}
+
+.pending_circle_style {
+  border-radius: 50%;
+  background: $color-second;
+  height: 1em;
+  width: 1em;
+  display: inline-block;
+}
+
+.complete_circle_style {
+  @extend .pending_circle_style;
+  background: $color-first;
+}
+
+.recent_activity_hash {
+  color: $color-second-darker;
+  flex: 0 1 auto;
+  font-size: 0.8em;
+  padding: 0 0.8em 0 0;
+}
+
+.recent_activity_author {
+  color: $color-forth;
+  font-size: 0.9em;
+  flex: 3 1 auto;
+}
+
+.recent_activity_updated {
+  color: $color-first-darker;
+  flex: 0 1 auto;
+  /*text-align: right;*/
+  font-size: 0.9em;
+}

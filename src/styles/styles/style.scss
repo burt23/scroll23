@@ -1,0 +1,184 @@
+@import "theme";
+.jumbotron {
+    background: transparent;
+}
+
+.req:after {
+    content: "*";
+    color: red;
+}
+/*
+.navbar {
+    margin-bottom: 0px;
+    background: transparent;
+    min-height: 50px;
+    border: 0px;
+}*/
+
+.navbar-nav > li > a {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: medium;
+    color: $color-third;
+}
+
+/* Navbar sandwich shown on phones(xs) */
+
+.navbar-toggle {
+    margin-top: 22px;
+}
+
+hr {
+    border-top-color: black;
+}
+
+.thumbnail > li {
+    float: none;
+}
+
+#foot {
+    //background: radial-gradient(#36414e, #253241);
+    background: black;
+    color: $color-grey;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#foot a {
+    color: $color-grey;
+}
+
+#foot a:hover:focus:visited {
+    color: $color-grey;
+}
+
+#foot-divide {
+    border-right-style: dotted;
+    border-right-color: $color-grey;
+    border-right-width: 1px;
+    max-height: 100%;
+}
+
+.section {
+    min-height: 500px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    overflow: auto;
+}
+
+.divider {
+    height: 30px;
+}
+
+.big-divider {
+    height: 120px;
+}
+
+.carousel-inner {
+    min-height: 250px;
+}
+
+.carousel-inner > .item > img {
+    margin: auto;
+    opacity: 0.8;
+}
+
+.carousel-indicators .active {
+    /*background-color: #73C3CE;*/
+    background-color: $color-first;
+}
+
+.carousel-indicators li {
+    background-color: rgba(70, 70, 70, 0.25);
+}
+
+.carousel-control.left,
+.carousel-control.right {
+    background-image: none;
+}
+
+.carousel-control {
+    font-size: 100px;
+    top: 30%;
+    color: #b0aaaa;
+}
+
+.img-face {
+    border-radius: 10%;
+}
+
+section {
+    @media (min-width: $screen-md-min) {
+        height: 650px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        overflow: auto;
+    }
+}
+
+.thumbnail .img-div {
+    height: 65px;
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+.thumbnail iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.img-div img {
+    max-width: 100%;
+}
+
+#demo {
+    background-color: $color-second;
+    position: fixed;
+    z-index: 100;
+    right: 0px;
+    bottom: 0px;
+    border-color: $color-second-darker;
+}
+
+.icon.md-18 {
+    font-size: 18px;
+}
+
+.icon.md-24 {
+    font-size: 24px;
+}
+
+.icon.md-36 {
+    font-size: 36px;
+}
+
+.icon.md-48 {
+    font-size: 48px;
+}
+
+.icon.md-96 {
+    font-size: 96px;
+}
+
+h1.primary-h1 {
+    color: $color-first;
+}
+
+.table-div {
+    display: table;
+}
+
+.table-div > div {
+    display: table-cell;
+    min-height: 100%;
+    height: 100%;
+    float: none;
+}
+
+code {
+    color: $color-second;
+    background-color: $color-grey-lightest;
+}

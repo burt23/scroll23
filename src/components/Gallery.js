@@ -1,5 +1,4 @@
 import React from "react";
-import Gallery from "react-photo-gallery";
 import Lightbox from "react-images";
 import weddingPhotos from './weddingPhotos';
 
@@ -43,7 +42,7 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <div className='PWFlexitem'>
+      <div className='galleryWrapper'>
         <img 
         onClick={(e)=>this.openLightbox(e, this.state.currentImageIndex)}
         src={this.props.src} alt='dogecoin' />

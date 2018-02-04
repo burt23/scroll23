@@ -2,43 +2,38 @@ import React from "react";
 import Gallery from "../components/Gallery";
 import appText from "../assets/text/appText";
 import Scroll from "react-scroll";
-import colorPhotos from '../components/colorPhotos'
-import bwPhotos from '../components/bwPhotos'
-import weddingPhotos from '../components/weddingPhotos'
-import portraitPhotos from '../components/portraitPhotos'
-import Testimonials from './Testimonials'
+import colorPhotos from "../components/colorPhotos";
+import bwPhotos from "../components/bwPhotos";
+import weddingPhotos from "../components/weddingPhotos";
+import portraitPhotos from "../components/portraitPhotos";
+import Testimonials from "./Testimonials";
 let Element = Scroll.Element;
 
 export default class Photography extends React.PureComponent {
-  constructor(){
+  constructor() {
     super();
-    this.state={
+    this.state = {
       showTestimonials: false
-    }
-    this.toggleTestimonials = this.toggleTestimonials.bind(this)
+    };
+    this.toggleTestimonials = this.toggleTestimonials.bind(this);
   }
 
   toggleTestimonials() {
-      console.log('opening Testimonials', this.state.showTestimonials)
+    console.log("opening Testimonials", this.state.showTestimonials);
     this.setState({
       showTestimonials: !this.state.showTestimonials
-    })
+    });
   }
 
   render() {
-  console.log('weddingPhotos', weddingPhotos[0].src)
+    console.log("weddingPhotos", weddingPhotos[0].src);
     return (
       <Element name="photography">
-      <h1 className='photographyHeader'> Photography </h1>
+        <h1 className="photographyHeader"> Photography </h1>
 
         <div className="photographyWrapper">
-
-
-
-
           <div className="PWWrapper">
-
-            <h3>Fine Art</h3>
+            <h2>Fine Art</h2>
 
             <div className="PWFlexrow">
               <div className="PWFlexitem">
@@ -49,17 +44,14 @@ export default class Photography extends React.PureComponent {
 
               <div className="PWFlexitem">
                 <Gallery src={weddingPhotos[0].src} images={bwPhotos} />
-                  <h4>{appText.photography.bw.tag}</h4>
-                  <p>{appText.photography.bw.text}</p>
+                <h4>{appText.photography.bw.tag}</h4>
+                <p>{appText.photography.bw.text}</p>
               </div>
             </div>
-
           </div>
 
-              
           <div className="PWWrapper">
-
-            <h3>Weddings</h3>
+            <h2>Weddings</h2>
 
             <div className="PWFlexrow">
               <div className="PWFlexitem">
@@ -74,11 +66,8 @@ export default class Photography extends React.PureComponent {
                 <p>{appText.photography.engagements.text}</p>
               </div>
             </div>
-
           </div>
-
         </div>
-
       </Element>
     );
   }

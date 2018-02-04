@@ -1,0 +1,42 @@
+@charset "UTF-8";
+@import "_theme-fonts";
+@import "_theme-colors";
+.panel-heading {
+    text-transform: uppercase;
+    color: white;
+    opacity: 1;
+    font-family: $font bold;
+    font-size: 24px;
+    text-align: center;
+}
+
+.panel-primary {
+    border-color: $color-first;
+}
+.panel-primary .panel-heading {
+    background-color: $color-first;
+    border-color: $color-first;
+}
+
+.panel-secondary {
+    border-color: $color-third;
+}
+.panel-secondary .panel-heading {
+    background-color: $color-third;
+    border-color: $color-third;
+}
+.panel-body ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.panel-body li {
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
+.panel-body li:before {
+  content: '✓';
+  padding-right: 5px;
+}

@@ -9,9 +9,6 @@ let Events = Scroll.Events;
 let scroll = Scroll.animateScroll;
 let scrollSpy = Scroll.scrollSpy;
 
-const resume =
-  "https://s3-us-west-2.amazonaws.com/assets.michaelburton.co/Michael+Burton+Res.pdf";
-
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
@@ -48,7 +45,7 @@ class NavBar extends React.Component {
         </Navbar.Header>
         <Navbar.Collapse id="navBarRightDesktop">
           <Nav pullRight>
-            <NavDropdown title="Projects" className="scrollLink">
+            <NavDropdown title="Projects">
               <Link
                 className="scrollLink"
                 to="mobileEnerlytics"
@@ -57,6 +54,8 @@ class NavBar extends React.Component {
                 duration={500}
                 offset={-100}
               >
+              Mobile Enerltyics
+              </Link>
               <Link
                 className="scrollLink"
                 to="truckHunt"
@@ -76,8 +75,6 @@ class NavBar extends React.Component {
                 offset={-150}
               >
                 Wizards Chess
-              </Link>
-                Private List
               </Link>
             </NavDropdown>
             <NavItem>
@@ -102,11 +99,6 @@ class NavBar extends React.Component {
                 About
               </Link>
             </NavItem>
-            {/*<NavItem>
-              <a href="https://s3-us-west-2.amazonaws.com/assets.michaelburton.co/Michael+Burton+Res.pdf" target="_blank" rel="noopener noreferrer" className="scrollLink">
-                Resume
-              </a>
-            </NavItem>*/}
           </Nav>
         </Navbar.Collapse>
         <Navbar.Collapse id="navBarRightMobile">

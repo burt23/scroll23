@@ -1,5 +1,4 @@
 import React from "react";
-import Logo from "../components/logo";
 import DownArrows from "../assets/svg/DownArrows";
 import TypistHero from "../components/TypistHero";
 import Scroll from "react-scroll";
