@@ -591,48 +591,79 @@ ul {
 .proColItem {
   flex: 1 1 auto;
 }
+.photographyHeader {
+  text-align: center;
+  padding: 0.5em;
+}
 
 .photographyWrapper {
   display: flex;
   flex-direction: row;
+  padding: 1em;
+  color: white;
+  border: 1px solid aqua;
+
 }
 .photographyWrapper > div>h3 {
   text-align: center;
   padding: 1em;
 }  
 
-.PWFineArt {
-  background: rgba(0,0,0,0.9);
+.PWWrapper {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid lightseagreen;
+  color: white;
   flex: 1;
-}
-.PWWeddings {
-  background: rgba(255,255,255,0.9);
-  flex: 1;
-  color: black;
+  padding: 1em;
+  height: 100%;
 }
 
+.PWWrapper:hover {
+    background: none;
+    transition: 0.2s ease;
+  }
+
 .PWFlexrow {
-  border: 10px solid gold;
   display: flex;
   flex-direction: row;
-  min-height: 30vh;
 }
 .PWFlexitem {
   flex: auto;
   height: 100%; 
+  /*padding: 0.5em;*/
+    position: relative;
+    overflow: hidden;
+    border: 1px solid salmon;
 }
 
 .PWFlexitem > img {
     width: 100%;
+    height: 100%;
 }
 
-.PWFlexitem > img {
-    width: 100%;
+.PWFlexitem > img:hover {
+  /*border: 1px solid gold;*/
+  /*text-decoration: none;*/
+  cursor: pointer;
+  /*color: #458bca;*/
+  transform: scale(1.1);
+  transition: 0.2s ease;
+}
+
+/*TODO: SCSS color sheet*/
+.PWFlexitem > h4 {
+  text-align: center;
+  padding: 0.5em;
+  color: #ccc;
+}
+.PWFlexitem > p {
+  text-align: justify;
 }
 
 .PWTestimonials {
   overflow: scroll;
   max-height: 300px;
+  max-width: 100%;
 }
 
 .techstackFlexbox {

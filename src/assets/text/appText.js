@@ -200,20 +200,24 @@ module.exports = {
   },
   photography: {
     color: {
-      src: "http://dogecoin.com/imgs/doge.png",
-      alt: "dogecoin"
+      alt: "Color Photo Gallery",
+      tag: 'Color Science Collection',
+      text: 'a collection of digital long exposure shots of landscape, motion, and experimental photography.  Tribute paid in post to the pioneers of film photography'
     },
     bw: {
-      src: "http://dogecoin.com/imgs/doge.png",
-      alt: "dogecoin"
+      alt: "Black and White Photo Gallery",
+      tag: 'B&W Collection',
+      text: 'Black and White Photo collection of digital images processed with silver film printing in mind.  A special emphasis on composition and message within each photo.'
     },
     weddings: {
-      src: "http://dogecoin.com/imgs/doge.png",
-      alt: "dogecoin"
+      alt: "Weddings Photo Gallery",
+      tag: 'Wedding Photography',
+      text: 'couples of all creeds celebrating the union of love while honoring their commitments to one another'
     },
-    portraits: {
-      src: "http://dogecoin.com/imgs/doge.png",
-      alt: "dogecoin"
+    engagements: {
+      alt: "Engagement Photo Gallery",
+      tag: 'Engagements',
+      text: 'Engagement shoots and portraits throughout the Bay Area.  Emphasis on capturing natural and spontaneous moments.'
     }
   }
 };

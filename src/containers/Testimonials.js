@@ -7,9 +7,7 @@ export default class Testimonials extends React.PureComponent {
   render() {
     return (
       <Element name="testimonials" className="testimonialsWrapper">
-        <div className="appWrapper">
-          <MasonryGallery />
-        </div>
+        <MasonryGallery />
       </Element>
     );
   }
