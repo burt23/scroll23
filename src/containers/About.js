@@ -18,7 +18,7 @@ export default class About extends React.PureComponent {
           <h1 className="projectHeader">About</h1>
           <div className="aboutFlexbox">
             <div className="aboutPhoto">
-              <div class="img-div">
+              <div className="img-div">
                 <img alt="mbProfilePhoto" src={me} />
               </div>
             </div>
