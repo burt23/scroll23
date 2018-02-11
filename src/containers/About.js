@@ -31,7 +31,7 @@ export default class About extends React.PureComponent {
 
           <div className="resume">
             <a href={resume} target="_blank" rel="noopener noreferrer">
-            <h2>Check out my Resume</h2>
+              <h2>Check out my Resume</h2>
               <img alt="Michael Burton Resume" src={resumeScreenshot} />
             </a>
           </div>

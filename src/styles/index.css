@@ -68,12 +68,12 @@ body {
 /*--------------- Links and buttons ------------*/
 a {
   font: "Open Sans", sans serif 14px bold;
-  color: #3FFFC6;
+  color: #3fffc6;
   text-decoration: none; }
 
 a:hover {
   font: "Open Sans", sans serif 14px bold;
-  color: #1AB285; }
+  color: #1ab285; }
 
 .btn-base, .btn-primary, .btn-primary:hover, .btn-secondary, .btn-secondary:hover {
   height: 40px;
@@ -83,21 +83,21 @@ a:hover {
   border: 0px; }
 
 .btn-primary, .btn-primary:hover {
-  background-color: #3AE8E6;
-  border-color: #3AE8E6;
+  background-color: #3ae8e6;
+  border-color: #3ae8e6;
   text-color: white; }
 
 .btn-primary:hover {
-  background-color: #179B9A; }
+  background-color: #179b9a; }
 
 .btn-secondary, .btn-secondary:hover {
-  border-color: #3AE8E6;
-  text-color: #3AE8E6;
+  border-color: #3ae8e6;
+  text-color: #3ae8e6;
   opacity: 1; }
 
 .btn-secondary:hover {
-  text-color: #179B9A;
-  border-color: #179B9A; }
+  text-color: #179b9a;
+  border-color: #179b9a; }
 
 .btn-secondary-white, .btn-secondary-white:hover {
   border-color: white;
@@ -105,15 +105,15 @@ a:hover {
   opacity: 1; }
 
 .btn-secondary-white:hover {
-  border-color: #FCFCFC;
-  text-color: #FCFCFC; }
+  border-color: #fcfcfc;
+  text-color: #fcfcfc; }
 
 .btn-link {
-  text-color: #3FFFC6;
+  text-color: #3fffc6;
   text-transform: uppercase; }
 
 .btn-link:hover {
-  text-color: #1AB285;
+  text-color: #1ab285;
   text-transform: uppercase; }
 
 /*--------------- Colors ------------*/
@@ -125,29 +125,29 @@ a:hover {
   color: #666666; }
 
 .color-first-text {
-  color: #4CD2FF; }
+  color: #4cd2ff; }
 
 .color-second-text {
-  color: #3AE8E6; }
+  color: #3ae8e6; }
 
 .color-forth-text {
-  color: #3A8EE8; }
+  color: #3a8ee8; }
 
 /** background color divs **/
 .grey-lightest-div {
-  background-color: #FCFCFC; }
+  background-color: #fcfcfc; }
 
 .grey-div {
-  background-color: #EEEEEE; }
+  background-color: #eeeeee; }
 
 .color-first-div {
-  background-color: #4CD2FF;
+  background-color: #4cd2ff;
   color: white; }
 
 /** border color divs **/
 .forth-border-div {
   border: 1px;
-  border-color: #3A8EE8;
+  border-color: #3a8ee8;
   border-style: solid; }
 
 /** slant divs **/
@@ -206,18 +206,18 @@ body {
   text-align: center; }
 
 .panel-primary {
-  border-color: #4CD2FF; }
+  border-color: #4cd2ff; }
 
 .panel-primary .panel-heading {
-  background-color: #4CD2FF;
-  border-color: #4CD2FF; }
+  background-color: #4cd2ff;
+  border-color: #4cd2ff; }
 
 .panel-secondary {
-  border-color: #3FFFC6; }
+  border-color: #3fffc6; }
 
 .panel-secondary .panel-heading {
-  background-color: #3FFFC6;
-  border-color: #3FFFC6; }
+  background-color: #3fffc6;
+  border-color: #3fffc6; }
 
 .panel-body ul {
   list-style: none;
@@ -257,6 +257,42 @@ body {
     font-size: 16px;
     color: white; } }
 
+/*@import "_theme";
+
+.techstackFlexbox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.techstackFlexitem {
+  flex: 0 1 auto;
+  padding: 0.5em;
+}
+
+.webProjectsHeader {
+  text-align: center;
+  padding: 2em;
+  text-decoration: underline;
+  color: $color-forth-darker;
+}
+
+.projectGithub > svg {
+  height: 50px;
+  fill: $color-forth-darker;
+}
+
+.techstackHeader {
+  color: $color-grey-lightest;
+  font-size: 2em;
+  padding: 1em;
+}
+
+.projectDivider {
+  border-color: $color-first-darker;
+}
+*/
 html,
 body,
 ul,
@@ -282,15 +318,15 @@ iframe {
   margin: 0 auto; }
 
 a {
-  color: #4CD2FF; }
+  color: #4cd2ff; }
 
 a:hover {
-  color: #238FB2;
+  color: #238fb2;
   text-decoration: none; }
 
 body {
   font-family: "Open Sans", sans-serif;
-  color: #FCFCFC; }
+  color: #fcfcfc; }
 
 span.Cursor.Cursor--blinking {
   display: none; }
@@ -351,15 +387,15 @@ svg {
 
 @keyframes line {
   0% {
-    stroke: #FCFCFC;
+    stroke: #fcfcfc;
     stroke-dashoffset: 10;
     opacity: 1; }
   25% {
-    stroke: #EEEEEE;
+    stroke: #eeeeee;
     stroke-dashoffset: 50;
     opacity: 1; }
   50% {
-    stroke: #CCCCCC;
+    stroke: #cccccc;
     stroke-dashoffset: 100;
     opacity: 1; }
   75% {
@@ -394,7 +430,7 @@ svg.bottom {
   top: 88vh; }
 
 .arrows path {
-  stroke: #238FB2;
+  stroke: #238fb2;
   fill: transparent;
   stroke-width: 1px;
   animation: arrow 2s infinite;
@@ -445,7 +481,7 @@ svg.bottom {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #FCFCFC; }
+  color: #fcfcfc; }
 
 @media screen and (max-width: 700px) {
   .welcomeStyle {
@@ -471,9 +507,9 @@ svg.bottom {
   width: 100vw; }
 
 #appWrapper {
-  background: -webkit-linear-gradient(to bottom, #4CD2FF, #3AE8E6);
+  background: -webkit-linear-gradient(to bottom, #4cd2ff, #3ae8e6);
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #4CD2FF, #3AE8E6); }
+  background: linear-gradient(to bottom, #4cd2ff, #3ae8e6); }
 
 .welcomeWrapper {
   height: 100vh;
@@ -486,10 +522,10 @@ svg.bottom {
 .projectHeader {
   text-align: center;
   padding: 1em 0;
-  color: #FCFCFC; }
+  color: #fcfcfc; }
 
 .projectTagline {
-  color: #3A8EE8; }
+  color: #3a8ee8; }
 
 .projectBannerImage > img {
   position: relative;
@@ -501,43 +537,58 @@ svg.bottom {
   border: 1px solid #666666;
   max-width: 700px;
   min-height: 40vh;
-  margin-bottom: 2em; }
+  margin-bottom: 2em;
+  flex-grow: 1; }
+
+.musicWrapper {
+  display: flex;
+  flex-direction: column;
+  /*background-image: url("https://f4.bcbits.com/img/0005527348_100.png");*/
+  text-align: center; }
+
+.musicRow {
+  display: flex;
+  flex-direction: row;
+  border: 3px dashed red; }
+
+.musicColItem {
+  flex: auto; }
+
+.musicItem {
+  flex: 0 1 auto;
+  border: 1px dashed salmon; }
 
 /*NAVBAR*/
 .navbar {
-  height: 5vh;
-  width: 100vw;
-  top: 0;
-  left: 0;
-  background: #4CD2FF; }
+  background: #4cd2ff; }
 
 .scrollLink {
   display: block;
   padding: 0 0.5em;
-  color: #FCFCFC; }
+  color: #fcfcfc; }
 
 .scrollLink:hover {
   text-decoration: none;
   cursor: pointer;
-  color: #238FB2; }
+  color: #238fb2; }
 
 ul.dropdown-menu {
-  background: #3AE8E6;
+  background: #3ae8e6;
   text-align: center; }
 
 .dropdown-menu > a:hover {
-  background: #FCFCFC; }
+  background: #fcfcfc; }
 
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:focus,
 .navbar-default .navbar-nav > .open > a:hover {
-  background: #3AE8E6; }
+  background: #3ae8e6; }
 
 a.dropdown-toggle {
-  color: #FCFCFC !important; }
+  color: #fcfcfc !important; }
 
 a.dropdown-toggle:hover {
-  color: #238FB2 !important; }
+  color: #238fb2 !important; }
 
 /*CONTENT*/
 .textStyle {
@@ -572,10 +623,10 @@ a.dropdown-toggle:hover {
   max-width: 10vw; }
 
 .footerItem > a {
-  fill: #FCFCFC; }
+  fill: #fcfcfc; }
 
 .footerItem > a:hover {
-  fill: #238FB2;
+  fill: #238fb2;
   transition: 0.2s ease; }
 
 div.img-div {
@@ -614,7 +665,7 @@ ul {
 
 .projectGithub > a > svg {
   height: 5vh;
-  fill: #3FFFC6; }
+  fill: #3fffc6; }
 
 .projectGithub {
   padding-bottom: 2em; }
@@ -630,10 +681,10 @@ ul {
   transition: 0.2s ease; }
 
 .resume > a {
-  color: #FCFCFC; }
+  color: #fcfcfc; }
 
 .resume > a:hover {
-  color: #238FB2;
+  color: #238fb2;
   text-decoration: none; }
 
 .projectDescription {
@@ -655,10 +706,10 @@ ul {
   stroke-dasharray: 140 540;
   stroke-dashoffset: -474;
   stroke-width: 8px;
-  stroke: #3AE8E6; }
+  stroke: #3ae8e6; }
 
 .text {
-  color: #FCFCFC;
+  color: #fcfcfc;
   font-family: "Open Sans", sans-serif;
   font-size: 22px;
   letter-spacing: 8px;
@@ -714,15 +765,15 @@ ul {
   display: flex;
   flex-direction: row;
   padding: 1em;
-  color: #FCFCFC; }
+  color: #fcfcfc; }
 
 .photographyWrapper > div > h3 {
   text-align: center;
   padding: 1em; }
 
 .PWWrapper {
-  background: #3AE8E6;
-  color: #FCFCFC;
+  background: #3ae8e6;
+  color: #fcfcfc;
   flex: 1;
   padding: 1em;
   margin: 0 0.5em;
@@ -730,7 +781,7 @@ ul {
 
 .PWWrapper:hover {
   background: none;
-  transition: 0.2s ease; }
+  transition: 0.3s ease; }
 
 .PWFlexrow {
   display: flex;
@@ -766,7 +817,7 @@ ul {
 .PWFlexitem > h4 {
   text-align: center;
   padding: 0.5em;
-  color: #179B9A; }
+  color: #179b9a; }
 
 .PWFlexitem > p {
   text-align: justify; }
@@ -783,18 +834,22 @@ ul {
 
 .webProjectsHeader {
   text-align: center;
-  padding: 2em;
-  /*text-decoration: underline;*/
-  color: #17579B; }
+  padding: 0em;
+  font-size: 3em;
+  color: #fcfcfc; }
 
 .projectGithub > svg {
   height: 50px;
-  fill: #17579B; }
+  fill: #17579b; }
 
 .techstackHeader {
-  color: #FCFCFC;
+  color: #fcfcfc;
   font-size: 2em;
   padding: 1em; }
 
 .projectDivider {
-  border-color: #238FB2; }
+  border-color: #fcfcfc;
+  border-style: dotted; }
+
+.visible {
+  z-index: 9998; }

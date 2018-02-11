@@ -9,9 +9,9 @@ export default class Projects extends React.PureComponent {
   render() {
     return (
       <div>
-          <hr className="projectDivider" />
         <div className="webProjectsWrapper">
-        <h1 className="webProjectsHeader">Web Projects</h1>
+          <h1 className="webProjectsHeader">Projects</h1>
+        <hr className="projectDivider" />;
           {/* ------------------MOBILE ENERLYTICS------------------ */}
           <Element name="mobileEnerlyics" className="mobileEnerltyicsWrapper">
             <div className="appWrapper">

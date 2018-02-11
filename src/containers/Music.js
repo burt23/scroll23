@@ -3,7 +3,6 @@ import Scroll from "react-scroll";
 import appText from "../assets/text/appText";
 
 let Element = Scroll.Element;
-const albumArt = "https://f4.bcbits.com/img/0005527348_100.png";
 
 export default class Music extends React.PureComponent {
   render() {
@@ -17,7 +16,6 @@ export default class Music extends React.PureComponent {
             </div>
           </div>
           <div>
-            <img src={albumArt} alt="Mottainai Album Art" />
             <iframe
               title="Mottainai"
               className="bandcampStyles"
@@ -29,6 +27,7 @@ export default class Music extends React.PureComponent {
               </a>
             </iframe>
           </div>
+          <hr className="projectDivider" />
         </div>
       </Element>
     );

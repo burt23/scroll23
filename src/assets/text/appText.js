@@ -46,41 +46,49 @@ module.exports = {
       mapbox: {
         src: mapbox,
         width: 70,
+        height: 70,
         title: "Mapbox"
       },
       node: {
         src: node,
         width: 70,
+        height: 70,
         title: "Node.js"
       },
       express: {
         src: expressjs,
         width: 70,
+        height: 70,
         title: "Express.js"
       },
       postgres: {
         src: postgres,
         width: 70,
+        height: 70,
         title: "PostgreSQL"
       },
       react: {
         src: react,
         width: 70,
+        height: 70,
         title: "React.js"
       },
       redux: {
         src: redux,
         width: 70,
+        height: 70,
         title: "Redux.js"
       },
       reactRouter: {
         src: reactRouter,
         width: 70,
+        height: 70,
         title: "React-Router"
       },
       semantic: {
         src: semantic,
         width: 70,
+        height: 70,
         title: "Semantic UI"
       }
     }
@@ -114,41 +122,49 @@ module.exports = {
       nginx: {
         src: nginx,
         width: 70,
+        height: 70,
         title: "NGiNX"
       },
       node: {
         src: node,
         width: 70,
+        height: 70,
         title: "Node.js"
       },
       material: {
         src: material,
         width: 70,
+        height: 70,
         title: "Material-UI"
       },
       react: {
         src: react,
         width: 70,
+        height: 70,
         title: "React.js"
       },
       express: {
         src: expressjs,
         width: 70,
+        height: 70,
         title: "Express.js"
       },
       reactRouter: {
         src: reactRouter,
+        height: 70,
         width: 70,
         title: "React-router"
       },
       redux: {
         src: redux,
+        height: 70,
         width: 70,
         title: "Redux.js"
       },
       mic: {
         src: mic,
         width: 70,
+        height: 70,
         title: "Google Chrome Speech API"
       }
     }
@@ -157,10 +173,11 @@ module.exports = {
     header: "Mobile Enerlytics",
     tagline: "Leader in Automated Testing for Reducing Battery Drain",
     display: "left",
+    link: 'https://www.mobileenerlytics.com',
     description:
-      "Leveraging nearly a decade’s worth of research into smart phone energy management, Mobile Enerlytics is a leader in mobile application testing solutions that lead to better app performance, user experience, and potentially billions of dollars in additional captured revenue. Today, the company works with some of the world’s leading app marketers, enhancing the performance of their apps through more efficient management of energy consumption.",
+      "Mobile Enerlytics provides advanced battery testing tools for Android app developers. Their platform taps directly into the Android kernel to monitor energy consumption at thread and component levels. Using this software, companies and developers can optimize battery life and write more energy efficient code.",
     accomplishments:
-      "Lead Frontend Developer on Greenfield project of an admin dashboard for enterprise B2B customers. Worked on creating user stories, and iteratively designed wireframes prior to coding. Made heavy use of Redux, Chart.js, React-Router, Material-UI, and SCSS.",
+      "As the lead Frontend Developer for Mobile Enerlytics's Eagle Tester web dashboard, I participated in all aspects of a product lifecycle within an agile team, from co-creating user stories, iteratively designing wireframes, to writing code. I made heavy use of React, Redux, SCSS, React-Router, Material-UI, and Chart.js.",
     img: {
       alt: "Mobile Enerlytics Screenshot",
       src: mobilescreenshot
@@ -169,31 +186,37 @@ module.exports = {
       redux: {
         src: redux,
         width: 70,
+        height: 70,
         title: "Redux.js"
       },
       reactRouter: {
         src: reactRouter,
         width: 70,
+        height: 70,
         title: "React-Router"
       },
       xd: {
         src: xd,
         width: 70,
+        height: 70,
         title: "Adobe XD"
       },
       material: {
         src: material,
         width: 70,
+        height: 70,
         title: "Material-UI"
       },
       html: {
         src: html,
-        width: 70,
+        width: 80,
+        height: 70,
         title: "HTML 5"
       },
       css3: {
         src: css3,
-        width: 70,
+        width: 80,
+        height: 70,
         title: "CSS 3"
       }
     }
@@ -201,23 +224,27 @@ module.exports = {
   photography: {
     color: {
       alt: "Color Photo Gallery",
-      tag: 'Color Science Collection',
-      text: 'a collection of digital long exposure shots of landscape, motion, and experimental photography.  Tribute paid in post to the pioneers of film photography'
+      tag: "Color Science Collection",
+      text:
+        "a collection of digital long exposure shots of landscape, motion, and experimental photography.  Tribute paid in post to the pioneers of film photography"
     },
     bw: {
       alt: "Black and White Photo Gallery",
-      tag: 'B&W Collection',
-      text: 'Black and White Photo collection of digital images processed with silver film printing in mind.  A special emphasis on composition and message within each photo.'
+      tag: "B&W Collection",
+      text:
+        "Black and White Photo collection of digital images processed with silver film printing in mind.  A special emphasis on composition and message within each photo."
     },
     weddings: {
       alt: "Weddings Photo Gallery",
-      tag: 'Wedding Photography',
-      text: 'couples of all creeds celebrating the union of love while honoring their commitments to one another'
+      tag: "Wedding Photography",
+      text:
+        "couples of all creeds celebrating the union of love while honoring their commitments to one another"
     },
     engagements: {
       alt: "Engagement Photo Gallery",
-      tag: 'Engagements',
-      text: 'Engagement shoots and portraits throughout the Bay Area.  Emphasis on capturing natural and spontaneous moments.'
+      tag: "Engagements",
+      text:
+        "Engagement shoots and portraits throughout the Bay Area.  Emphasis on capturing natural and spontaneous moments."
     }
   }
 };

@@ -256,79 +256,30 @@ body {
     font-size: 16px;
     color: white; } }
 
-/*@import "_theme";
-
 .techstackFlexbox {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-}
+  justify-content: space-evenly; }
 
 .techstackFlexitem {
   flex: 0 1 auto;
-  padding: 0.5em;
-}
+  padding: 0.5em; }
 
 .webProjectsHeader {
   text-align: center;
   padding: 2em;
-  text-decoration: underline;
-  color: $color-forth-darker;
-}
+  /*text-decoration: underline;*/
+  color: #17579b; }
 
 .projectGithub > svg {
   height: 50px;
-  fill: $color-forth-darker;
-}
+  fill: #17579b; }
 
 .techstackHeader {
-  color: $color-grey-lightest;
+  color: #fcfcfc;
   font-size: 2em;
-  padding: 1em;
-}
+  padding: 1em; }
 
 .projectDivider {
-  border-color: $color-first-darker;
-}
-*/
-.App {
-  text-align: center; }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px; }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px; }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
-
-.App-header {
-  background-color: #4cd2ff;
-  height: 150px;
-  padding: 20px;
-  color: white; }
-
-.App-title {
-  font-size: 1.5em; }
-
-.App-intro {
-  font-size: large; }
-
-#canvas {
-  display: block;
-  left: 50%;
-  margin: -125px 0 0 -125px;
-  position: absolute;
-  top: 50%; }
-
-rect.shape:hover {
-  text-decoration: none;
-  cursor: pointer;
-  color: #4cd2ff; }
+  border-color: #238fb2; }

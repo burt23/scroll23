@@ -1,4 +1,5 @@
 @import "_theme";
+@import '_projects';
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 
 html,
@@ -264,7 +265,6 @@ svg.bottom {
   height: 100vh;
   width: 100vw;
 }
-
 #appWrapper {
   background: -webkit-linear-gradient(
     to bottom,
@@ -303,14 +303,30 @@ svg.bottom {
   max-width: 700px;
   min-height: 40vh;
   margin-bottom: 2em;
+  flex-grow: 1;
+}
+
+.musicWrapper {
+  display: flex;
+  flex-direction: column;
+  /*background-image: url("https://f4.bcbits.com/img/0005527348_100.png");*/
+  text-align: center;
+}
+.musicRow {
+  display: flex;
+  flex-direction: row;
+  border: 3px dashed red;
+}
+.musicColItem {
+  flex: auto;
+}
+.musicItem {
+  flex: 0 1 auto;
+  border: 1px dashed salmon;
 }
 
 /*NAVBAR*/
 .navbar {
-  height: 5vh;
-  width: 100vw;
-  top: 0;
-  left: 0;
   background: $color-first;
 }
 .scrollLink {
@@ -575,7 +591,7 @@ ul {
 
 .PWWrapper:hover {
   background: none;
-  transition: 0.2s ease;
+  transition: 0.3s ease;
 }
 
 .PWFlexrow {
@@ -636,9 +652,9 @@ ul {
 
 .webProjectsHeader {
   text-align: center;
-  padding: 2em;
-  /*text-decoration: underline;*/
-  color: $color-forth-darker;
+  padding: 0em;
+  font-size: 3em;
+  color: $color-grey-lightest;
 }
 
 .projectGithub > svg {
@@ -653,5 +669,10 @@ ul {
 }
 
 .projectDivider {
-  border-color: $color-first-darker;
+  border-color: $color-grey-lightest;
+  border-style: dotted;
+}
+
+.visible {
+  z-index: 9998;
 }

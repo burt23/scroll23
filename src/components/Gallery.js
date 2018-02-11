@@ -1,6 +1,5 @@
 import React from "react";
 import Lightbox from "react-images";
-import weddingPhotos from './weddingPhotos';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -9,50 +8,28 @@ export default class App extends React.Component {
       currentImageIndex: 0,
       lightboxIsOpen: false,
     };
-    this.closeLightbox = this.closeLightbox.bind(this);
-    this.openLightbox = this.openLightbox.bind(this);
-    this.gotoNext = this.gotoNext.bind(this);
-    this.gotoPrevious = this.gotoPrevious.bind(this);
+    this.fireOpenLightbox = this.fireOpenLightbox.bind(this)
   }
 
-  openLightbox(event, obj) {
-    this.setState({
-      lightboxIsOpen: true
-    });
-  }
-
-  closeLightbox() {
-    this.setState({
-      currentImageIndex: 0,
-      lightboxIsOpen: false
-    });
-  }
-
-  gotoPrevious() {
-    this.setState({
-      currentImageIndex: this.state.currentImageIndex - 1
-    });
-  }
-
-  gotoNext() {
-    this.setState({
-      currentImageIndex: this.state.currentImageIndex + 1
-    });
+  fireOpenLightbox(){
+    this.props.openLightbox()
   }
 
   render() {
+    console.log('props', this.props)
     return (
       <div className='galleryWrapper'>
         <img 
-        onClick={(e)=>this.openLightbox(e, this.state.currentImageIndex)}
-        src={this.props.src} alt='dogecoin' />
+        onClick={this.fireOpenLightbox}
+        src={this.props.src} alt={this.props.src} />
         <Lightbox
-          images={weddingPhotos}
-          onClose={this.closeLightbox}
-          onClickPrev={this.gotoPrevious}
-          onClickNext={this.gotoNext}
-          currentImage={this.state.currentImageIndex}
-          isOpen={this.state.lightboxIsOpen}
+          images={this.props.images}
+          onClose={this.props.onClose}
+          onClickPrev={this.props.onClickPrev}
+          onClickNext={this.props.onClickNext}
+          currentImage={this.props.currentImage}
+          isOpen={this.props.isOpen}
+          ref={this.props.inputRef}
         />
       </div>
     );

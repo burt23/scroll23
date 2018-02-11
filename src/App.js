@@ -94,7 +94,7 @@ class App extends React.Component {
     var loader = new canvasLoader();
     loader.init();
 
- setTimeout(this.toggleLoading, 500);
+    setTimeout(this.toggleLoading, 500);
   }
 
   componentWillUnmount() {
@@ -127,15 +127,17 @@ class App extends React.Component {
   render() {
     if (!this.state.loading) {
       return (
-        <div id='appWrapper'>
+        <div id="appWrapper">
           <Navbar />
           <Particles params={params} className="particles" />
           <WelcomePage />
-          <Projects />
-          <Photography />
-          <Music />
-          <About />
-          <Footer />
+          <div className="visible">
+            <Projects />
+            <Photography />
+            <Music />
+            <About />
+            <Footer />
+          </div>
         </div>
       );
     } else {

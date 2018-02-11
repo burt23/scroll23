@@ -5,7 +5,6 @@ import Scroll from "react-scroll";
 let Link = Scroll.Link;
 
 export default class extends React.PureComponent {
-  // <Logo />
   render() {
     return (
       <div className="welcomeWrapper">

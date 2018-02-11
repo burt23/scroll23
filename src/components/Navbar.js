@@ -54,7 +54,7 @@ class NavBar extends React.Component {
                 duration={500}
                 offset={-100}
               >
-              Mobile Enerltyics
+                Mobile Enerltyics
               </Link>
               <Link
                 className="scrollLink"
@@ -77,7 +77,7 @@ class NavBar extends React.Component {
                 Wizards Chess
               </Link>
             </NavDropdown>
-            <NavItem>
+            <NavItem componentClass="span">
               <Link
                 className="scrollLink"
                 to="weddings"
@@ -86,15 +86,15 @@ class NavBar extends React.Component {
                 duration={500}
                 offset={-150}
               >
-                Photography 
+                Photography
               </Link>
             </NavItem>
-            <NavItem>
+            <NavItem componentClass="span">
               <Link className="scrollLink" to="music" spy smooth duration={700}>
                 Music
               </Link>
             </NavItem>
-            <NavItem>
+            <NavItem componentClass="span">
               <Link className="scrollLink" to="about" spy smooth duration={900}>
                 About
               </Link>
@@ -103,7 +103,7 @@ class NavBar extends React.Component {
         </Navbar.Collapse>
         <Navbar.Collapse id="navBarRightMobile">
           <Nav pullRight>
-            <NavItem>{/* TODO: ADD MOBILE MENU */}</NavItem>
+            <NavItem componentClass="span">{/* TODO: ADD MOBILE MENU */}</NavItem>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
