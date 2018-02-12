@@ -224,25 +224,25 @@ module.exports = {
   photography: {
     color: {
       alt: "Color Photo Gallery",
-      tag: "Color Science Collection",
+      tag: "Full Spectrum",
       text:
         "a collection of digital long exposure shots of landscape, motion, and experimental photography.  Tribute paid in post to the pioneers of film photography"
     },
     bw: {
       alt: "Black and White Photo Gallery",
-      tag: "B&W Collection",
+      tag: "Black & White",
       text:
         "Black and White Photo collection of digital images processed with silver film printing in mind.  A special emphasis on composition and message within each photo."
     },
     weddings: {
       alt: "Weddings Photo Gallery",
-      tag: "Wedding Photography",
+      tag: "Weddings",
       text:
         "couples of all creeds celebrating the union of love while honoring their commitments to one another"
     },
     engagements: {
       alt: "Engagement Photo Gallery",
-      tag: "Engagements",
+      tag: "Portraiture",
       text:
         "Engagement shoots and portraits throughout the Bay Area.  Emphasis on capturing natural and spontaneous moments."
     }

@@ -1,5 +1,15 @@
 const bwPhotos = [
   {
+    src: "https://s3-us-west-2.amazonaws.com/assets.michaelburton.co/bw/chaingmai.jpg",
+    width: 3,
+    height: 4
+  },
+  {
+    src: "https://s3-us-west-2.amazonaws.com/assets.michaelburton.co/bw/wat.jpg",
+    width: 3,
+    height: 4
+  },
+  {
     src: "https://s3-us-west-2.amazonaws.com/assets.michaelburton.co/bw/_MG_7592.jpg",
     width: 4,
     height: 3
@@ -89,21 +99,7 @@ const bwPhotos = [
     width: 4,
     height: 3
   },
-  {
-    src: "https://s3-us-west-2.amazonaws.com/assets.michaelburton.co/bw/wat.jpg",
-    width: 3,
-    height: 4
-  },
-  {
-    src: "https://s3-us-west-2.amazonaws.com/assets.michaelburton.co/bw/boat.jpg",
-    width: 4,
-    height: 3
-  },
-  {
-    src: "https://s3-us-west-2.amazonaws.com/assets.michaelburton.co/bw/chaingmai.jpg",
-    width: 3,
-    height: 4
-  }
+  
 ];
 
 export default bwPhotos;

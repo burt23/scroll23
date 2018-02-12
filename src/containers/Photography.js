@@ -2,11 +2,11 @@ import React from "react";
 import Gallery from "../components/Gallery";
 import appText from "../assets/text/appText";
 import Scroll from "react-scroll";
-import colorPhotos from "../components/bwPhotos";
+import colorPhotos from "../components/colorPhotos";
 import bwPhotos from "../components/bwPhotos.js";
 import weddingPhotos from "../components/weddingPhotos";
 import portraitPhotos from "../components/bwPhotos";
-// import Testimonials from "./Testimonials";
+import testimonials from "../components/testimonials";
 let Element = Scroll.Element;
 
 export default class Photography extends React.PureComponent {
@@ -14,8 +14,16 @@ export default class Photography extends React.PureComponent {
     super();
     this.state = {
       showTestimonials: false,
-      currentImageIndex: 0,
-      lightboxIsOpen: false
+      bwCurrentImageIndex: 0,
+      colorCurrentImageIndex: 0,
+      weddingCurrentImageIndex: 0,
+      portraitCurrentImageIndex: 0,
+      testimonialsCurrentImageIndex: 0,
+      bwIsOpen: false,
+      colorIsOpen: false,
+      portraitIsOpen: false,
+      weddingIsOpen: false,
+      testimonialsIsOpen: false,
     };
     this.toggleTestimonials = this.toggleTestimonials.bind(this);
     this.closeLightbox = this.closeLightbox.bind(this);
@@ -30,28 +38,40 @@ export default class Photography extends React.PureComponent {
       showTestimonials: !this.state.showTestimonials
     });
   }
-  openLightbox(event, obj) {
+
+  openLightbox(e, obj) {
+    console.log('opening lightboxIsOpen', e)
+    let val = e + 'IsOpen'
+    console.log('val', val)
     this.setState({
-      lightboxIsOpen: true
+      [val]: true
     });
   }
 
-  closeLightbox() {
+  closeLightbox(e) {
+    let val = e + 'CurrentImageIndex'
+    let gal = e + 'IsOpen'
+
     this.setState({
-      currentImageIndex: 0,
-      lightboxIsOpen: false
+      [val]: 0,
+      [gal]: false
     });
   }
 
-  gotoPrevious() {
+  gotoPrevious(e) {
+    let val = e + 'CurrentImageIndex'
+    let count = this.state[val] - 1 
+
     this.setState({
-      currentImageIndex: this.state.currentImageIndex - 1
+      [val]: count 
     });
   }
 
-  gotoNext() {
+  gotoNext(e) {
+    let val = e + 'CurrentImageIndex'
+    let count = this.state[val] + 1
     this.setState({
-      currentImageIndex: this.state.currentImageIndex + 1
+      [val]: count 
     });
   }
 
@@ -69,15 +89,15 @@ export default class Photography extends React.PureComponent {
             <div className="PWFlexrow">
               <div className="PWFlexitem">
                 <Gallery
-                  images={weddingPhotos}
-                  src={weddingPhotos[0].src}
+                  images={colorPhotos}
+                  src={colorPhotos[0].src}
                   openLightbox={this.openLightbox}
                   onClose={this.closeLightbox}
                   onClickPrev={this.gotoPrevious}
                   onClickNext={this.gotoNext}
-                  currentImage={this.state.currentImageIndex}
-                  isOpen={this.state.lightboxIsOpen}
-                  inputRef={el=>this.inputRef = el}
+                  currentImage={this.state.colorCurrentImageIndex}
+                  isOpen={this.state.colorIsOpen}
+                  gallery='color'
                 />
                 <h4>{appText.photography.color.tag}</h4>
                 <p>{appText.photography.color.text}</p>
@@ -91,8 +111,9 @@ export default class Photography extends React.PureComponent {
                   onClose={this.closeLightbox}
                   onClickPrev={this.gotoPrevious}
                   onClickNext={this.gotoNext}
-                  currentImage={this.state.currentImageIndex}
-                  isOpen={this.state.lightboxIsOpen}
+                  currentImage={this.state.bwCurrentImageIndex}
+                  isOpen={this.state.bwIsOpen}
+                  gallery='bw'
                 />
                 <h4>{appText.photography.bw.tag}</h4>
                 <p>{appText.photography.bw.text}</p>
@@ -112,8 +133,9 @@ export default class Photography extends React.PureComponent {
                   onClose={this.closeLightbox}
                   onClickPrev={this.gotoPrevious}
                   onClickNext={this.gotoNext}
-                  currentImage={this.state.currentImageIndex}
-                  isOpen={this.state.lightboxIsOpen}
+                  currentImage={this.state.weddingCurrentImageIndex}
+                  isOpen={this.state.weddingIsOpen}
+                  gallery='wedding'
                 />
                 <h4>{appText.photography.weddings.tag}</h4>
                 <p>{appText.photography.weddings.text}</p>
@@ -122,18 +144,37 @@ export default class Photography extends React.PureComponent {
               <div className="PWFlexitem">
                 <Gallery
                   openLightbox={this.openLightbox}
-                  src={weddingPhotos[0].src}
+                  src={portraitPhotos[0].src}
                   images={portraitPhotos}
                   onClose={this.closeLightbox}
                   onClickPrev={this.gotoPrevious}
                   onClickNext={this.gotoNext}
-                  currentImage={this.state.currentImageIndex}
-                  isOpen={this.state.lightboxIsOpen}
+                  currentImage={this.state.portraitCurrentImageIndex}
+                  isOpen={this.state.portraitIsOpen}
+                  gallery='portrait'   
                 />
                 <h4>{appText.photography.engagements.tag}</h4>
                 <p>{appText.photography.engagements.text}</p>
               </div>
             </div>
+              <div className='PWtestimonials'>
+                <h2 
+                  className='clickable'
+                  onClick={()=>this.openLightbox('testimonials')}>Testimonials
+                </h2>
+                <Gallery
+                  openLightbox={this.openLightbox}
+                  // src={testimonials[0].src}
+                  images={testimonials}
+                  onClose={this.closeLightbox}
+                  onClickPrev={this.gotoPrevious}
+                  maxHeight="100px"
+                  onClickNext={this.gotoNext}
+                  currentImage={this.state.testimonialsCurrentImageIndex}
+                  isOpen={this.state.testimonialsIsOpen}
+                  gallery='testimonials'
+                />
+              </div>
           </div>
         </div>
         <hr className="projectDivider" />

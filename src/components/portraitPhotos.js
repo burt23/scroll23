@@ -1,4 +1,4 @@
-const weddingPhotos = [
+const portraitPhotos = [
   {
     src: "https://s3-us-west-2.amazonaws.com/assets.michaelburton.co/IMG_0901.jpg",
     width: 4,
@@ -46,4 +46,4 @@ const weddingPhotos = [
   },
 ];
 
-export default weddingPhotos;
+export default portraitPhotos;

@@ -1,4 +1,4 @@
-module.exports = [
+const testimonials = [
   {
     src:
       "https://s3-us-west-2.amazonaws.com/assets.michaelburton.co/Screen+Shot+2017-11-14+at+11.01.56+AM.png"
@@ -108,3 +108,5 @@ module.exports = [
       "https://s3-us-west-2.amazonaws.com/assets.michaelburton.co/Screen+Shot+2017-11-14+at+11.07.30+AM.png"
   },
 ]
+
+export default testimonials;
