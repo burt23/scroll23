@@ -1,0 +1,62 @@
+@import '_theme-colors';
+
+/** Text divs **/
+.grey-text {
+    color: $color-grey-darker;
+}
+
+.grey-darkest-text {
+    color: $color-grey-darkest;
+}
+
+.color-first-text {
+    color: $color-first;
+}
+
+.color-second-text {
+    color: $color-second;
+}
+
+.color-forth-text {
+    color: $color-forth;
+}
+
+/** background color divs **/
+.grey-lightest-div {
+    background-color: $color-grey-lightest;
+}
+
+.grey-div {
+    background-color: $color-grey-lighter;
+}
+
+.color-first-div {
+    background-color: $color-first;
+    color: white;
+}
+
+/** border color divs **/
+.forth-border-div {
+    border: 1px;
+    border-color: $color-forth;
+    border-style: solid;
+}
+
+/** slant divs **/
+.slant-first-div {
+    @media (min-width: $screen-md-min) {
+        width: 0;
+        height: 0;
+        border-left: 100vw solid transparent;
+        border-top: 15vw solid #fff;
+    }
+}
+
+.slant-container {
+    @media (min-width: $screen-md-min) {
+        margin-top: -15vw;
+    }
+    @media (min-width: $screen-lg-min) {
+        margin-top: -12vw;
+    }
+}

@@ -1,0 +1,64 @@
+@import "_theme-fonts";
+@import "_theme-colors";
+/*--------------- Links and buttons ------------*/
+a {
+    font: $font 14px bold;
+    color: $color-third;
+    text-decoration: none;
+}
+
+a:hover {
+    font: $font 14px bold;
+    color: $color-third-darker;
+}
+
+.btn-base {
+    height: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-transform: uppercase;
+    border: 0px;
+}
+
+.btn-primary {
+    @extend .btn-base;
+    background-color: $color-second;
+    border-color: $color-second;
+    text-color: white;
+}
+.btn-primary:hover {
+    @extend .btn-primary;
+    background-color: $color-second-darker;
+}
+
+.btn-secondary {
+    @extend .btn-base;
+    border-color: $color-second;
+    text-color: $color-second;
+    opacity: 1;
+}
+.btn-secondary:hover {
+    @extend .btn-secondary;
+    text-color: $color-second-darker;
+    border-color: $color-second-darker;
+}
+
+.btn-secondary-white {
+    border-color: white;
+    text-color: white;
+    opacity: 1;
+}
+.btn-secondary-white:hover {
+    @extend .btn-secondary-white;
+    border-color: $color-grey-lightest;
+    text-color: $color-grey-lightest;   
+}
+
+.btn-link {
+    text-color: $color-third;
+    text-transform: uppercase;
+}
+.btn-link:hover{
+    text-color: $color-third-darker;
+    text-transform: uppercase;
+}

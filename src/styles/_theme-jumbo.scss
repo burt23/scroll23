@@ -1,0 +1,17 @@
+.jumbotron {
+    @media (min-width: $screen-sm-min) {
+        width: 50%;
+        text-align: left;
+        margin-left: 6%;
+    }
+    @media (max-width: $screen-xs-max) {
+        padding: 0px;
+    }
+}
+
+.jumbotron p{
+    @media (max-width: $screen-xs-max) {
+        font-size: 16px;
+        color: white;
+    }
+}
